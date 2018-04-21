@@ -1,0 +1,35 @@
+h1, h2{
+    text-align: center;
+}
+button {
+    display: block;
+    width: 90vw;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+}
+#btn-venues{
+   margin: 0 auto;
+        text-align: center;
+}
+
+.venue-box{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.venue-imgs{
+    max-width: 30vw;
+}
+
+.venue-text{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+}
+p{
+    padding: 0;
+}
