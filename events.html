@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUSET</title>
     <link rel="stylesheet" href="css/events.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -25,31 +26,40 @@
   </div>
 </div>
 <header>
-    <nav><a href="eBurger.html">&#9776</a></nav>
-    <div class="search"></div></header>
+    <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
+   </header>
 <div class="filters"><button class="genreFilter" type="button">GENRE</button>
 <button class="dateFilter"  type="button">DATE</button>
 <button class="venueFilter"  type="button">VENUE</button></div>
-
+   <div class="mainNav">
+   <div class="close">&times;</div>
+    <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
+     <a href="events.html">Events</a>
+     <a href="eContacts.html">Contacts</a>
+     <a href="eFaq.html">FAQ</a>
+   </div>
    <div class="sideNav genreNav">
-       <div class="gFilter rock_metal">ROCK and METAL</div>
-       <div class="gFilter poetry">POETRY</div>
-       <div class="gFilter alternative">ALTERNATIVE</div>
-       <div class="gFilter cinema">CINEMA</div>
-       <div class="gFilter open_mic">OPEN MIC</div>
+      <div class="filterTitle">GENRE</div>
+       <div class="gFilter rock_metal">Rock and Metal</div>
+       <div class="gFilter poetry">Poetry</div>
+       <div class="gFilter alternative">Alternative</div>
+       <div class="gFilter cinema">Cinema</div>
+       <div class="gFilter open_mic">Open mic</div>
    </div>
 
 
 
    <div class="sideNav venueNav">
-       <div class="vFilter stardust">STARDUST</div>
-       <div class="vFilter musikcafèen">MUSIKCAFÈEN</div>
-       <div class="vFilter bastarden">BASTARDEN CAFE</div>
-       <div class="vFilter stage">STAGE</div>
-       <div class="vFilter huset_biograf"> HUSET BIOGRAF</div>
+            <div class="filterTitle">VENUES</div>
+
+       <div class="vFilter stardust">Stardust</div>
+       <div class="vFilter musikcafèen">Musikcafèen</div>
+       <div class="vFilter bastarden">Bastarden Café</div>
+       <div class="vFilter stage">Stage</div>
+       <div class="vFilter huset_biograf"> Huset Biograf</div>
    </div>
     <main>
-    <h3></h3>
+    <h6 class="alert">Oops, seems like there are no matches to your filter</h6>
     </main>
 
 
@@ -67,10 +77,10 @@
     <template>
        <section>
         <h1>EVENT NAME</h1>
-           <h3><span class="date"> </span> <span class="day"> </span>/<span class="month"></span>/<span class="year"></span> at <span class="time">TIME</span>.00</h3>
+           <h6><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span>  at <span class="time">TIME</span>.00</h6>
                <img src="" alt="artist pic">
-               <h4 class="genre">GENRE</h4>
-               <h4><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h4><button type="button">BUY TICKET</button>
+               <h6 class="genre">GENRE</h6>
+               <h6><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h6><button type="button">BUY TICKET</button>
                <div class="more">more info
                   </div>
     </section>

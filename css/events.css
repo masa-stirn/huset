@@ -15,48 +15,105 @@ background: #fc4a1a;  /* fallback for old browsers */
 body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+
+
 }
 
 main {
     margin-bottom: 10vh;
 }
 
-section {
-    background-color: antiquewhite;
-    margin: 1vw;
-    margin-top: 3vw;
-    padding: 4vw;
-    position: relative;
-}
-
-section img {
-    width: 90vw;
-    padding-top: 3vw;
+h6 {
+    font-weight: 100;
+    font-size: 15px;
+    padding-bottom: 1vw;
 }
 
 .hide {
     display: none;
-    opacity:0;
+    opacity: 0;
     visibility: hidden;
+}
+
+button {
+    padding: 3vw;
+    background: none;
+    border-radius: 0%;
+    border-color: #B9B5B5;
+    border-width: thin;
+    width: 25vw;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.gradient {
+    background: #fc4a1a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.alert {
+    width: 70vw;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    display: none;
+    padding-top: 20vh;
+    text-align:center;
 }
 
 /*section*/
 
-section button {
-    float: right;
+section {
+    border-bottom: solid 1px black;
+    border-bottom-width: thin;
+    margin-top: 3vw;
+    margin-left: 2.5vw;
+    padding-top: 8vw;
+    padding-left: 4vw;
+    padding-bottom: 10vw;
+    width: 88vw;
+    position: relative;
 }
 
-.genre {text-transform: capitalize;}
+
+
+section img {
+    width: 70vw;
+    height: 35vh;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    padding-left: 6vw;
+}
+
+section button {
+    width: 33vw;
+    position: absolute;
+    bottom: 14.2vw;
+    right: 7vw;
+
+}
+
+.genre {
+    text-transform: capitalize;
+}
 
 /*navigation*/
 
 nav.secondary {
     position: fixed;
     display: flex;
+    color: white;
     justify-content: space-around;
     align-items: center;
     bottom: 0;
-    height: 5vh;
+    opacity: .96;
+    height: 8vh;
     width: 100%;
     background: #fc4a1a;
     /* fallback for old browsers */
@@ -66,6 +123,70 @@ nav.secondary {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+nav.secondary a {
+    color: white;
+    text-decoration-line: none;
+}
+
+/*burger*/
+
+.burger {
+    max-width: 20px;
+    padding: 1em;
+}
+
+.mainNav {
+    height: 100%;
+    width: 0vw;
+    position: fixed;
+    z-index: 2;
+    top: 0vw;
+    left: 0vw;
+    background: #fc4a1a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #fc4a1a, #f7b733);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow-x: hidden;
+    transition: 1s;
+    opacity: .96;
+    color: white;
+
+}
+
+.mainNav a {
+    width: 80%;
+    display: block;
+    font-size: 20px;
+    float: left;
+    margin-top: 1.5em;
+    margin-left: .4em;
+    padding-left: .3em;
+}
+
+.logo {
+    width: 23vw;
+    float: left;
+    padding: 1em;
+}
+
+.close {
+    float: right;
+    height: 1em;
+    padding: 1em;
+}
+
+.slideMeRight {
+    animation: slideMeRight 1s ease forwards;
+}
+
+@keyframes slideMeRight {
+    to {
+        width: 60%;
+    }
+}
+
 /*SIDENAV FILTER*/
 
 .filters {
@@ -73,63 +194,110 @@ nav.secondary {
     justify-content: space-around;
 }
 
+.highlighted {
+    background: #fc4a1a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .sideNav {
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 80vw;
     position: fixed;
     z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #fff;
+    top: -20vw;
+    left: 6vw;
+    background: #fc4a1a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #fc4a1a, #f7b733);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
+    padding-top: 10px;
+    padding-left: 6vw;
+    transition: 1s;
+    opacity: .96;
+    color: white;
+}
+
+.sideNav div,
+.mainNav a {
+    padding-bottom: 3vw;
+    border-bottom: white solid .5px;
+    width: 90%;
+    padding-top: 1vh;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+div.sideNav div.filterTitle {
+    padding-bottom: 6vw;
+    border-bottom: 0px;
+}
+
+.slideMe {
+    animation: slideMe 1s ease forwards;
+}
+
+@keyframes slideMe {
+    to {
+        height: 50vh;
+        top: 18vh;
+    }
 }
 
 .sideNav div {
     cursor: pointer;
 }
 
-/*burger*/
-
-.burgerNav {
-    width: 70vw;
-    height: 50vh;
-    background-color: antiquewhite;
-    margin-top: 20vh;
-    margin-left: 15vw;
-
-
-}
-
-.burgerNav a {
-    width: 100%;
-    display: block;
-
-}
 
 /*modal*/
 
 .more {
     text-decoration-line: underline;
     cursor: pointer;
+    font-weight: bold;
+    padding-top: 2vw;
 }
 
 .modal {
     position: fixed;
-    background-color: whitesmoke;
-    opacity: .8;
-    color: black;
+    background: #fc4a1a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #fc4a1a, #f7b733);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: .96;
+    color: white;
     min-height: 60vh;
-    max-height: 90vh;
+    max-height: 100vh;
     width: 90vw;
-    top: 5vh;
-    left:5vw;
+    top: 4vh;
+    left: 5vw;
+    padding: 1em;
     overflow-y: scroll;
 }
 
-.modal h2{display: block;
-width:100%;}
+.modal h2 {
+    display: block;
+    width: 80%;
+    border-bottom:white 1px solid;
+    padding-top:.5em;
+    padding-left:.3em;
+    padding-bottom:.5em;
+    margin-bottom:.5em;
+}
+
+.contentMe {
+        padding-left:.3em;
+
+}
 
 
 
@@ -142,6 +310,7 @@ width:100%;}
     margin: -50px 0 0 -74px;
     left: 50%;
     top: 60%;
+    z-index:4;
 
 }
 

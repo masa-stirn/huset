@@ -2,6 +2,8 @@ let evtPath = "http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events
 let template = document.querySelector('template').content;
 let main = document.querySelector('main');
 let pList = 'http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?slug='
+let alert = document.querySelector('.alert');
+
 
 
 
@@ -10,6 +12,7 @@ $(window).ready(() => {
     $('.loader-wrapper').addClass('hide');
 })
 
+/*REST API*/
 
 function fetchEvents() {
     console.log('im fetching')
@@ -80,7 +83,7 @@ let count = 0;
 function Filter(genre, filter) {
     console.log('yo')
     count = 0;
-    document.querySelector('h3').textContent="";
+    alert.style.cssText = "display:none;";
     let sections = document.querySelectorAll('section');
     let length = sections.length;
     sections.forEach((s) => {
@@ -96,8 +99,8 @@ function Filter(genre, filter) {
             if (length == count)
 
             {
-                let alert = document.querySelector('h3');
-                alert.textContent = "Sorry, there are no events available at the time that match your filter"
+
+                alert.style.cssText = "display:block;"
 
 
 
@@ -110,12 +113,28 @@ function Filter(genre, filter) {
 
 
 $('.genreFilter').on('click', () => {
-    $('.genreNav').css('width', '90vw')
+    if ($('.genreFilter').hasClass('highlighted') == false) {
+        $('.genreFilter').addClass('highlighted')
+    }else {$('.genreFilter').removeClass('highlighted')}
+    if ($('.venueFilter').hasClass('highlighted')) {
+        $('.venueFilter').removeClass('highlighted')
+    }
+
+    if ($('.venueNav').hasClass('slideMe')) {
+        $('.venueNav').removeClass('slideMe')
+    }
+    if ($('.genreNav').hasClass('slideMe')) {
+        $('.genreNav').removeClass('slideMe')
+    } else {
+        $('.genreNav').addClass('slideMe')
+    }
+
     $('.genreNav').on('click', () => {
-        $('.genreNav').css('width', '0vw')
+        $('.genreNav').removeClass('slideMe')
     })
     document.querySelectorAll('.gFilter').forEach((g) => {
         g.addEventListener('click', () => {
+            $('.genreFilter').removeClass('highlighted')
             if (g.classList.contains('cinema')) {
                 Filter('cinema', 'genre');
             } else if (g.classList.contains('poetry')) {
@@ -137,12 +156,28 @@ $('.genreFilter').on('click', () => {
 
 
 $('.venueFilter').on('click', () => {
-    $('.venueNav').css('width', '90vw')
+    if ($('.venueFilter').hasClass('highlighted') == false) {
+        $('.venueFilter').addClass('highlighted') }else {$('.venueFilter').removeClass('highlighted')}
+
+    if ($('.genreFilter').hasClass('highlighted')) {
+        $('.genreFilter').removeClass('highlighted')
+    }
+    if ($('.genreNav').hasClass('slideMe')) {
+        $('.genreNav').removeClass('slideMe')
+    }
+    if ($('.venueNav').hasClass('slideMe')) {
+        $('.venueNav').removeClass('slideMe')
+    } else {
+        $('.venueNav').addClass('slideMe')
+    }
+
     $('.venueNav').on('click', () => {
-        $('.venueNav').css('width', '0vw')
+        $('.venueNav').removeClass('slideMe')
+
     })
     document.querySelectorAll('.vFilter').forEach((v) => {
         v.addEventListener('click', () => {
+            $('.venueFilter').removeClass('highlighted')
             if (v.classList.contains('stardust')) {
                 Filter('Stardust', 'venue');
             } else if (v.classList.contains('musikcafèen')) {
@@ -159,4 +194,14 @@ $('.venueFilter').on('click', () => {
     })
 
 
+})
+
+$('.burger').on('click', () => {
+    $('.mainNav').addClass('slideMeRight')
+    console.log('eat a burger')
+
+})
+
+$('.close').on('click', () => {
+    $('.mainNav').removeClass('slideMeRight')
 })
