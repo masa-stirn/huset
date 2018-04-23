@@ -1,6 +1,8 @@
 let evtPath = "http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?_embed"
 let template = document.querySelector('template').content;
 let main = document.querySelector('main');
+let pList = 'http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?slug='
+
 
 
 /*loader handler*/
@@ -18,7 +20,6 @@ function showEvents(evt) {
     evt.forEach((e) => {
         let clone = template.cloneNode(true);
         let picPath = e.acf.event_picture.sizes.medium
-        let pList = 'http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?slug='
 
 
         console.log('im cloning')
@@ -74,14 +75,19 @@ fetchEvents()
 
 /*filter*/
 
-let count=0;
+let count = 0;
 
-function genreFilter(genre) {
+function Filter(genre, filter) {
+    console.log('yo')
+    count = 0;
+    document.querySelector('h3').textContent="";
     let sections = document.querySelectorAll('section');
     let length = sections.length;
     sections.forEach((s) => {
         s.classList.remove('hide');
-        if (s.querySelector('.genre').textContent != genre) {
+        console.log(filter)
+        if (s.querySelector('.' + filter).textContent != genre) {
+            console.log(s.querySelector('.' + filter).textContent, genre)
             count++;
             s.classList.add('hide')
             console.log(s.querySelector('.genre'));
@@ -89,14 +95,13 @@ function genreFilter(genre) {
 
             if (length == count)
 
-     {     let alert =  document.createElement('h3');
+            {
+                let alert = document.querySelector('h3');
                 alert.textContent = "Sorry, there are no events available at the time that match your filter"
 
-                main.appendChild(alert)
 
 
-
-        }
+            }
         }
     })
 
@@ -112,15 +117,15 @@ $('.genreFilter').on('click', () => {
     document.querySelectorAll('.gFilter').forEach((g) => {
         g.addEventListener('click', () => {
             if (g.classList.contains('cinema')) {
-                genreFilter('cinema');
+                Filter('cinema', 'genre');
             } else if (g.classList.contains('poetry')) {
-                genreFilter('poetry');
+                Filter('poetry', 'genre');
             } else if (g.classList.contains('rock_metal')) {
-                genreFilter('rock_metal')
+                Filter('rock_metal', 'genre')
             } else if (g.classList.contains('alternative')) {
-                genreFilter('alternative')
+                Filter('alternative', 'genre')
             } else if (g.classList.contains('open_mic')) {
-                genreFilter('open mic');
+                Filter('open mic', 'genre');
             }
         })
 
@@ -136,18 +141,18 @@ $('.venueFilter').on('click', () => {
     $('.venueNav').on('click', () => {
         $('.venueNav').css('width', '0vw')
     })
-    document.querySelectorAll('.gFilter').forEach((g) => {
-        g.addEventListener('click', () => {
-            if (g.classList.contains('stadust')) {
-                genreFilter('stardust');
-            } else if (g.classList.contains('musikcafèen')) {
-                genreFilter('musikcafèen');
-            } else if (g.classList.contains('bastarden')) {
-                genreFilter('bastarden')
-            } else if (g.classList.contains('')) {
-                genreFilter('')
-            } else if (g.classList.contains('')) {
-                genreFilter('');
+    document.querySelectorAll('.vFilter').forEach((v) => {
+        v.addEventListener('click', () => {
+            if (v.classList.contains('stardust')) {
+                Filter('Stardust', 'venue');
+            } else if (v.classList.contains('musikcafèen')) {
+                Filter('Musikcafèen', 'venue');
+            } else if (v.classList.contains('bastarden')) {
+                Filter('Bastarden', 'venue');
+            } else if (v.classList.contains('stage')) {
+                Filter('Stage', 'venue');
+            } else if (v.classList.contains('huset_biograf')) {
+                Filter('Huset Biograf', 'venue');
             }
         })
 
