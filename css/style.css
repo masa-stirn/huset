@@ -28,7 +28,16 @@ a {
 }
 .venue-imgs{
     max-width: 30vw;
+}
 
+.concert-modal h1, .concert-modal div, .concert-modal p {
+   padding: 10px;
+}
+.concert-modal button{
+    margin-bottom: 10px;
+}
+.conc-img{
+    width:100%;
 }
 
 .venue-text{
