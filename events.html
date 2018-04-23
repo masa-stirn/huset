@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUSET</title>
+    <link rel="stylesheet" href="css/events.css">
+</head>
+
+<body>
+<div class="loader-wrapper">
+	<div class="loader">
+    <div class="roller"></div>
+    <div class="roller"></div>
+  </div>
+
+  <div id="loader2" class="loader">
+    <div class="roller"></div>
+    <div class="roller"></div>
+  </div>
+
+  <div id="loader3" class="loader">
+    <div class="roller"></div>
+    <div class="roller"></div>
+  </div>
+</div>
+<header>
+    <nav><a href="eBurger.html">&#9776</a></nav>
+    <div class="search"></div></header>
+<div class="filters"><button class="genreFilter" type="button">GENRE</button>
+<button class="dateFilter"  type="button">DATE</button>
+<button class="venueFilter"  type="button">VENUE</button></div>
+
+   <div class="sideNav genreNav">
+       <div class="gFilter rock_metal">ROCK and METAL</div>
+       <div class="gFilter poetry">POETRY</div>
+       <div class="gFilter alternative">ALTERNATIVE</div>
+       <div class="gFilter cinema">CINEMA</div>
+       <div class="gFilter open_mic">OPEN MIC</div>
+   </div>
+
+
+
+   <div class="sideNav venueNav">
+       <div class="vFilter stardust">STARDUST</div>
+       <div class="vFilter musikcafèen">MUSIKCAFÈEN</div>
+       <div class="vFilter bastarden">BASTARDEN CAFE</div>
+       <div class="vFilter"></div>
+       <div class="vFilter"></div>
+   </div>
+    <main>
+    </main>
+
+
+    <nav class="secondary">
+    <a href="events.html">E</a>
+    <a href="volunteer.html">V</a>
+    <a href="performer.html">P</a>
+    </nav>
+
+ <div class="modal hide">
+   <h2></h2>
+    <p class="contentMe"></p>
+    </div>
+
+    <template>
+       <section>
+        <h1>EVENT NAME</h1>
+           <h3><span class="date"> </span> <span class="day"> </span>/<span class="month"></span>/<span class="year"></span> at <span class="time">TIME</span>.00</h3>
+               <img src="" alt="artist pic">
+               <h4 class="genre">GENRE</h4>
+               <h4><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h4><button type="button">BUY TICKET</button>
+               <div class="more">more info
+                  </div>
+    </section>
+    </template>
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
