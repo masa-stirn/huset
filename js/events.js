@@ -72,7 +72,7 @@ fetchEvents()
 
 
 
-/*filters*/
+/*filter*/
 
 let count=0;
 
