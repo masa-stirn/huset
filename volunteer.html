@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUSET</title>
+    <link rel="stylesheet" href="css/volunteer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <section>
+            <div class="burger-menu">&#9776;</div>
+            <nav class="main-nav close">
+                <div class="nav-items"> <a href="#" class="closebtn">&times;</a> <a href="index.html">My calendar</a> <a href="index.html">FAQ</a> <a href="index.html">Contact</a> </div>
+            </nav>
+        </section>
+        <div>
+            <div class="top-view">
+                <div class="color-layer"> <a href="#"><i class="fa fa-search"></i></a>
+                    <div class="header">
+                        <h1>Rahul Acosta</h1>
+                        <div class="profile-container"> <img class="profile main" alt="Avatar">
+                            <div class="notifications"><span class="numNotification">8</span></div>
+                        </div>
+                    </div>
+                    <div class="month-selection"> <i class="icon arrow-left"></i> <i class="icon right arrow-right"></i> <span class="month">May</span> </div>
+                </div>
+            </div>
+            <div class="bottom-view">
+                <div class="week-container">
+                    <ul class="week">
+                        <li class="day day-names"><span>sun</span></li>
+                        <li class="day day-names"><span>mon</span></li>
+                        <li class="day day-names"><span>tue</span></li>
+                        <li class="day day-names"><span>wed</span></li>
+                        <li class="day day-names"><span>thu</span></li>
+                        <li class="day day-names"><span>fri</span></li>
+                        <li class="day day-names"><span>sat</span></li>
+                    </ul>
+                    <div class="arrow-move-left"> <a href="">&#8249;</a> </div>
+                    <div class="arrow-move-right"> <a href="">&#8250;</a> </div>
+                    <ul class="week">
+                        <li class="day"><span>5</span></li>
+                        <li class="day current point"><span>6</span></li>
+                        <li class="day"><span>7</span></li>
+                        <a href="?date=20180508"><li class="day"><span>8</span></li></a>
+                        <li class="day"><span>9</span></li>
+                        <li class="day point"><span>10</span></li>
+                        <li class="day"><span>11</span></li>
+                    </ul>
+                </div>
+                <section class="entry-container">
+
+
+<!--
+                    <article class="entry"> <img src="https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg" alt="event-picture" class="profile" />
+                        <h2 class="text">
+                        <span class="title">Catch up with the event at </span>
+                    </h2> <span class="name">Stardust</span> <span class="time">8 - 10am</span> </article>
+-->
+                </section>
+            </div>
+        </div>
+    </div>
+     <div class="popup">
+        <aside class="modal-content">
+        <h1 class="modal-title">Volunteers working tonight!</h1>
+        <img alt="popup image" class="modal-image" src="https://cambridgeeditors.com/wp-content/uploads/2017/12/placeholder_square.jpg">
+        <p class="popuptext band">Band-care</p> <p class="popuptext bar">Bartending</p> <p class="popuptext light">Lighting</p>
+
+      </aside>
+    </div>
+
+    <template id="template-events">
+    <article class="entry">
+        <div class="thumbnail">
+        <img src="" alt="event-picture" class="profile">
+            </div>
+            <h3 class="event-title"></h3>
+        <p class="location"></p>
+        <p class="time"></p>
+        <h4 class="volunteer-role"></h4>
+         <button class="buttonModal">Who's working?</button>
+
+
+        </article>
+    </template>
+
+</body>
+    <script src="js/volunteer.js"></script>
+</html>
