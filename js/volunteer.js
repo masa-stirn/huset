@@ -6,10 +6,10 @@ let popup = document.querySelector(".popup");
 
 
 popup.addEventListener("click", function(){
-    popup.classList.remove("hide");
+    popup.classList.add("hide");
+
 
 })
-
 
 
 
