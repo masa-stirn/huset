@@ -198,7 +198,6 @@ $('.venueFilter').on('click', () => {
 
 $('.burger').on('click', () => {
     $('.mainNav').addClass('slideMeRight')
-    console.log('eat a burger')
 
 })
 
