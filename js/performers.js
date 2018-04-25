@@ -6,7 +6,9 @@ const concVenues = document.querySelector("#concert-venues");
 
 function fetchVenues() {
         //make request
-        fetch("http://test.masawudesign.dk/wp-json/wp/v2/venues?_embed")
+        let urlParams = new URLSearchParams(window.location.search)
+        let cat = urlParams.get("category");
+        fetch("http://test.masawudesign.dk/wp-json/wp/v2/venues?_embed&categories="+cat)
             //respons back
             .then(e => e.json())
             //now we have the data, we can do with it whatever we want
@@ -26,7 +28,7 @@ function showSingleVenue(aVenue) {
     let venText = aVenue.slug;
      let venImgs = aVenue._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
 
-    //button img
+    //CONCERT BUTTONS ON THE TOP OF CONCER VENUE PAGE
     if(aVenue.acf.concert===true){
 
         clone.querySelector(".venue-imgs").setAttribute("src", venImgs)
@@ -40,11 +42,19 @@ function showSingleVenue(aVenue) {
         clone.querySelector(".venue-text").append(cafeen);
     }
 }
+    //THEATRE BUTTONS ON THE TOP OF THEATRE VENUE PAGE
+    if(aVenue.acf.theatre===true){
+
+        clone.querySelector(".venue-imgs").setAttribute("src", venImgs)
+    //button text
+        clone.querySelector(".venue-text").textContent=venText.toUpperCase();
+}
+
     btnVenues.appendChild(clone);
 
     //fetch the content for each venue
 
-       let clone2 = concTemplate.cloneNode(true);
+    let clone2 = concTemplate.cloneNode(true);
 
     clone2.querySelector("h1").textContent = aVenue.title.rendered;
     clone2.querySelector(".desciption").innerHTML = aVenue.content.rendered;
@@ -78,6 +88,43 @@ function showSingleVenue(aVenue) {
         clone2.querySelector(".venue").textContent = "Venue: " + "concert";
     }
 
+    clone2.querySelector(".readmore").href="form.html?id=" + aVenue.id;
     concVenues.appendChild(clone2);
  }
 fetchVenues();
+
+// burger menu
+let burgerMenu = document.querySelector(".burger-menu");
+let navItems = document.querySelector(".nav-items");
+let navMenu = document.querySelector(".main-nav");
+let closebtn = document.querySelector(".closebtn");
+document.addEventListener('DOMcontentLoaded', hideMenu)
+
+function hideMenu() {
+    navMenu.classList.remove("open");
+}
+burgerMenu.addEventListener("click", openMenu)
+
+function openMenu() {
+    navMenu.classList.add("open");
+    navMenu.classList.remove("close");
+    navItems.classList.remove("hide");
+    navMenu.style.transition = "0.5s";
+}
+closebtn.addEventListener("click", closeMenu)
+
+function closeMenu() {
+    navMenu.classList.remove("open");
+    navMenu.classList.add("close");
+    navItems.classList.add("hide");
+    navMenu.style.transition = "0.5s";
+}
+//function filter(myFilter) {
+//    document.querySelectorAll("main .cat-section").forEach(section => {
+//        if (section.id == myFilter || myFilter == "all") {
+//            section.classList.remove("hide");
+//        } else {
+//            section.classList.add("hide");
+//        }
+//    })
+//}

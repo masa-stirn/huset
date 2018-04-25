@@ -1,3 +1,6 @@
+h1, h2,h3,p,a{
+    font-family: "roboto", sans-serif;
+}
 h1.white{
     color: #fff;
 }
@@ -47,7 +50,7 @@ a {
     left:0;
     right: 0;
     top:0;
-background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
     color: #000;
     font-family: sans-serif;
     font-weight: 600;
@@ -68,4 +71,55 @@ p{
 }
 body{
     background: linear-gradient(to right, #642b73, #c6426e);
+}
+
+/* burger menu */
+
+.nav-items {
+    padding: 10px;
+}
+
+.closebtn {
+    font-size: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.burger-menu {
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.main-nav {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    background: linear-gradient(to right, #642b73, #c6426e);;
+    box-shadow: 10px #505050;
+}
+
+.main-nav a {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.open {
+    width: 60%;
+}
+
+.close {
+    width: 0;
+    overflow: hidden;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
 }
