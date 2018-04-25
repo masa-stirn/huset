@@ -12,17 +12,27 @@
 
     <!-- burger menu here -->
     <section>
-            <div class="burger-menu">&#9776;</div>
-            <nav class="main-nav close">
-                <div class="nav-items"> <a href="#" class="closebtn">&times;</a> <a href="performers.html">Venues</a> <a href="#">FAQ</a> <a href="#">Contact</a> </div>
-            </nav>
+        <div class="burger-menu">&#9776;</div>
+        <nav class="main-nav close">
+            <div class="nav-items"> <a href="#" class="closebtn">&times;</a> <a href="performers.html">Venues</a> <a href="#">FAQ</a> <a href="#">Contact</a> </div>
+        </nav>
     </section>
-    <!-- intro text -->
-    <h1 class="white">At which venue would you like to perform?</h1>
+    <!-- header section -->
+    <section id="header-venue">
+        <div class="gradient">
+          <img class="search-icon" src="images/search.svg" alt="search icon">
+           <img class="chat-icon" src="images/message.svg" alt="chat icon">
+            <template id="header-template">
+                <div class="header-box">
+                    <h2 class="header-text"></h2>
+                </div>
+            </template>
+        </div>
+    </section>
 
     <!-- buttons -->
     <section id="btn-venues">
-    <template id="btn-template">
+        <template id="btn-template">
     <div class="venue-box">
        <img class="venue-imgs" src="" alt="">
         <p class="venue-text"></p>
@@ -32,7 +42,7 @@
 
     <!-- template -->
     <section id="concert-venues">
-    <template id="concert-template">
+        <template id="concert-template">
       <article class="concert-modal">
           <h1>TITLE</h1>
           <img class="conc-img" src="" alt="">

@@ -1,29 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: BigJohn;
+    src: url(../fonts/big-john.otf);
+}
 h1, h2,h3,p,a{
     font-family: "roboto", sans-serif;
 }
-h1.white{
-    color: #fff;
+h1.title{
+    font-family: "BigJohn", sans-serif;
+    font-size: 35px;
 }
-h1, h2{
+h1{
     text-align: center;
-    font-family: sans-serif;
     padding-top: 10px;
+    font-weight: 700;
+    font-size: 24px;
 }
-button {
-    display: block;
-    width: 90vw;
-    height: 50px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+h2{
+    font-weight: 100;
+    font-size: 20px;
+}
+h3{
+    font-weight: 100;
+    font-size: 15px;
+}
+p{
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0;
 }
 a {
     text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
 }
-#btn-venues{
-   margin: 0 auto;
-        text-align: center;
+/* choose venue page */
+body#performer{
+      background: url(../images/performer-stage.jpg);
+    height: 100vh;
+}
+.gradient {
+    background: linear-gradient(to bottom, rgba(100,43,115, 0.5), rgba(198,66,110, 0.5));
+    height: 100vh;
+    width: 100vw;
+}
+.heading{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+.heading h1{
+    max-width: 80vw;
+    display: flex;
+    margin:0 auto
+}
+.heading h2{
+    padding: 20px;
+    text-align: center;
+}
+button {
+    display: block;
+    width: 55vw;
+    height: 65px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 2px 1px 3px rgba(0, 0, 0, .2);
+}
+button a {
+    color: rgb(100,43,115);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 20px;
 }
 
+/* single venue page */
+/*heading*/
+#header-venue{
+    width: 100vw;
+    height: 150px;
+    background: url(../images/audience-band-celebration.png);
+}
+#header-venue .gradient{
+    max-height: 150px;
+}
+.gradient img{
+    width: 22px;
+    height: auto;
+    padding-top: 33px;
+    padding-right: 30px;
+    float: right;
+}
+.gradient img:first-child{
+    padding-top: 31px;
+    width: 19px;
+}
+.header-text{
+    position: absolute;
+    top: 80px;
+    left:0;
+    right:0;
+    text-align: center;
+    color: #fff;
+}
+
+#btn-venues{
+   margin: 0 auto;
+ text-align: center;
+}
 .venue-box{
     position: relative;
     display: inline-block;
@@ -32,7 +119,6 @@ a {
 .venue-imgs{
     max-width: 30vw;
 }
-
 .concert-modal h1, .concert-modal div, .concert-modal p {
    padding: 10px;
 }
@@ -42,7 +128,6 @@ a {
 .conc-img{
     width:100%;
 }
-
 .venue-text{
     position: absolute;
     bottom: 0;
@@ -58,23 +143,15 @@ a {
   flex-direction: column;
   justify-content: center;
 }
-p{
-    padding: 0;
-}
-
 .concert-modal div{
     padding-bottom: 10px;
 }
-
 .concert-modal {
     background: rgba(255,255,255,0.95)
 }
-body{
-    background: linear-gradient(to right, #642b73, #c6426e);
-}
+
 
 /* burger menu */
-
 .nav-items {
     padding: 10px;
 }
