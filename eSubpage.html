@@ -28,9 +28,7 @@
 <header>
     <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
 
-<div class="filters"><button class="genreFilter" type="button">GENRE</button>
-<button class="dateFilter"  type="button">DATE</button>
-<button class="venueFilter"  type="button">VENUE</button></div>  </header>
+ </header>
    <div class="mainNav">
    <div class="close">&times;</div>
     <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
@@ -38,28 +36,9 @@
      <a href="eContacts.html">Contacts</a>
      <a href="eFaq.html">FAQ</a>
    </div>
-   <div class="sideNav genreNav">
-      <div class="filterTitle">GENRE</div>
-       <div class="gFilter rock_metal">Rock and Metal</div>
-       <div class="gFilter poetry">Poetry</div>
-       <div class="gFilter alternative">Alternative</div>
-       <div class="gFilter cinema">Cinema</div>
-       <div class="gFilter open_mic">Open mic</div>
-   </div>
 
 
-
-   <div class="sideNav venueNav">
-            <div class="filterTitle">VENUES</div>
-
-       <div class="vFilter stardust">Stardust</div>
-       <div class="vFilter musikcafèen">Musikcafèen</div>
-       <div class="vFilter bastarden">Bastarden Café</div>
-       <div class="vFilter stage">Stage</div>
-       <div class="vFilter huset_biograf"> Huset Biograf</div>
-   </div>
     <main>
-    <h6 class="alert">Oops, seems like there are no matches to your filter</h6>
     </main>
 
 
@@ -74,22 +53,19 @@
     <p class="contentMe"></p>
     </div>
 
-    <template>
        <section>
-       <a href="eSubpage.html?id=">
         <h1>EVENT NAME</h1>
            <h6><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span>  at <span class="time">TIME</span>.00</h6>
-              <div class="thumb"><img class="" src="" alt="artist pic"></div></a>
+              <div class="thumb"><img class="artist" src="" alt="artist pic"></div>
                <h6 class="genre">GENRE</h6>
                <h6><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h6><button type="button">BUY TICKET</button>
-               <div class="more">more info
-           </div>
+               <div class="more"><a href="eSubpage.html?id="></a>more info
+                  </div>
     </section>
-    </template>
 
 
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/events.js"></script>
+    <script src="js/eSub.js"></script>
 </body>
 </html>

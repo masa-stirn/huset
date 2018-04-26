@@ -23,6 +23,10 @@ function showEvents(evt) {
     evt.forEach((e) => {
         let clone = template.cloneNode(true);
         let picPath = e.acf.event_picture.sizes.medium
+        console.log(e.id)
+        document.querySelectorAll('section a').forEach((s)=>{s.href="eSubpage.html?id="+e.id;})
+
+
 
 
         console.log('im cloning')
@@ -61,7 +65,6 @@ function showEvents(evt) {
             modal.addEventListener('click', () => modal.classList.add('hide'))
             window.onscroll = () => modal.classList.add('hide')
         }
-
 
 
         main.appendChild(clone)
@@ -195,6 +198,8 @@ $('.venueFilter').on('click', () => {
 
 
 })
+
+/*menu*/
 
 $('.burger').on('click', () => {
     $('.mainNav').addClass('slideMeRight')

@@ -12,6 +12,8 @@ background: #fc4a1a;  /* fallback for old browsers */
     padding: 0;
 }
 
+a{color:black;
+text-decoration-line: none;}
 
 body {
     max-width: 100%;
