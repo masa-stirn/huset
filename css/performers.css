@@ -106,6 +106,7 @@ button a {
     text-align: center;
     color: #fff;
 }
+/*body*/
 
 #btn-venues{
    margin: 0 auto;
@@ -148,6 +149,10 @@ button a {
 }
 .concert-modal {
     background: rgba(255,255,255,0.95)
+}
+.readmore{
+    color: black;
+    text-transform: uppercase;
 }
 
 

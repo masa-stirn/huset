@@ -1,8 +1,8 @@
 const btnTemplate = document.querySelector("#btn-template").content;
 const btnVenues = document.querySelector("#btn-venues");
 
-const headerTemplate = document.querySelector("#header-template").content;
-const headerVenues = document.querySelector("#header-venue");
+//const headerTemplate = document.querySelector("#header-template").content;
+//const headerVenues = document.querySelector("#header-venue");
 
 const concTemplate = document.querySelector("#concert-template").content;
 const concVenues = document.querySelector("#concert-venues");
@@ -17,21 +17,6 @@ function fetchVenues() {
             //now we have the data, we can do with it whatever we want
             .then(showVenues)
     }
-
-//fetch content for the top 3 buttons of the concert venues
-fetch("http://test.masawudesign.dk/wp-json/wp/v2/categories")
-            //respons back
-            .then(e => e.json())
-            //now we have the data, we can do with it whatever we want
-            .then(showHeaderText)
-
-function showHeaderText(aCat){
-    console.log(aCat)
-    let clone3 = headerTemplate.cloneNode(true);
-    // display text in the header of the page
-    clone3.querySelector(".header-text").textContent= "VENUES";
-    headerVenues.appendChild(clone3);
-}
 
 function showVenues(data) {
         //console.log(data)
@@ -80,6 +65,7 @@ function showSingleVenue(aVenue) {
     //fetch the content for each venue
 
     let clone2 = concTemplate.cloneNode(true);
+    //let clone3 = headerTemplate.cloneNode(true);
 
     clone2.querySelector("h1").textContent = aVenue.title.rendered;
     clone2.querySelector(".desciption").innerHTML = aVenue.content.rendered;
@@ -105,17 +91,20 @@ function showSingleVenue(aVenue) {
     }
     else if (aVenue.acf.theatre===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "theatre";
+        //clone3.querySelector(".header-text").textContent= "THEATRE VENUES";
     }
     else if (aVenue.acf.cinema===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "cinema";
+        //clone3.querySelector(".header-text").textContent= "CINEMA VENUE";
     }
     else if (aVenue.acf.concert===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "concert";
+        //clone3.querySelector(".header-text").textContent= "CONCERT VENUES";
     }
 
     clone2.querySelector(".readmore").href="form.html?id=" + aVenue.id;
     concVenues.appendChild(clone2);
-
+    //headerVenues.appendChild(clone3);
 
 
  }
