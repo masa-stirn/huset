@@ -80,32 +80,32 @@ function showSingleVenue(aVenue) {
     //console.log(aVenue)
 
     clone2.querySelector(".conc-img").setAttribute("src", venImgs);
-     clone2.querySelector("div span").textContent = " " + aVenue.acf.rental_cost;
-    clone2.querySelector(".floor").textContent = "Floor: " + aVenue.acf.floor;
-    clone2.querySelector(".usage").textContent = "Usage: " + aVenue.acf.usage;
-    clone2.querySelector(".facilitates").textContent = "Facilities: " +aVenue.acf.facilitates_on_the_venue;
+     clone2.querySelector(".price").textContent = aVenue.acf.rental_cost;
+    clone2.querySelector(".floor").textContent = aVenue.acf.floor;
+    clone2.querySelector(".usage").textContent = aVenue.acf.usage;
+    clone2.querySelector(".facilitates").textContent = aVenue.acf.facilitates_on_the_venue;
     ;
     if (aVenue.acf.catering===true){
-        clone2.querySelector(".catering").textContent = "Catering: " + "yes";
+        clone2.querySelector(".catering").textContent = "yes";
     }
     else {
-        clone2.querySelector(".catering").textContent = "Catering: " + "no";
+        clone2.querySelector(".catering").textContent = "no";
     }
-    clone2.querySelector(".cleaning").textContent = "Cleaning: " + aVenue.acf.cleaning;
-    clone2.querySelector(".capacity").textContent = "Capacity: " + aVenue.acf.capacity;
+    clone2.querySelector(".cleaning").textContent = aVenue.acf.cleaning;
+    clone2.querySelector(".capacity").textContent = aVenue.acf.capacity;
     if (aVenue.acf.concert===true && aVenue.acf.theatre===true){
-        clone2.querySelector(".venue").textContent = "Venue: " + "concert & theatre";
+        clone2.querySelector(".venue").textContent = "concert & theatre";
     }
     else if (aVenue.acf.theatre===true){
-        clone2.querySelector(".venue").textContent = "Venue: " + "theatre";
+        clone2.querySelector(".venue").textContent = "theatre";
 
     }
     else if (aVenue.acf.cinema===true){
-        clone2.querySelector(".venue").textContent = "Venue: " + "cinema";
+        clone2.querySelector(".venue").textContent = "cinema";
 
     }
     else if (aVenue.acf.concert===true){
-        clone2.querySelector(".venue").textContent = "Venue: " + "concert";
+        clone2.querySelector(".venue").textContent = "concert";
 
     }
 

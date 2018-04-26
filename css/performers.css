@@ -40,6 +40,9 @@ a {
     font-weight: 700;
     font-size: 12px;
 }
+.bold{
+    font-weight: 700;
+}
 /* choose venue page */
 body#performer{
       background: url(../images/performer-stage.jpg);
@@ -147,8 +150,8 @@ body#performer{
   flex-direction: column;
   justify-content: center;
 }
-.concert-modal div{
-    padding-bottom: 10px;
+.concert-modal h3{
+    padding: 10px;
 }
 .concert-modal {
     background: rgba(255,255,255,0.95)
