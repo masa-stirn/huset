@@ -28,8 +28,6 @@ function showVenues(data) {
     document.querySelector(".header-text").textContent=headerTxt.toUpperCase() + " VENUES";
     }
 
-
-
 function showSingleVenue(aVenue) {
 
     //fetch content for the top 3 buttons of the concert venues
@@ -38,7 +36,7 @@ function showSingleVenue(aVenue) {
     let venText = aVenue.slug;
      let venImgs = aVenue._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
 
-    //CONCERT BUTTONS ON THE TOP OF CONCER VENUE PAGE
+    //CONCERT BUTTONS ON THE TOP OF CONCERT VENUE PAGE
     if(aVenue.acf.concert===true){
 
         clone.querySelector(".venue-imgs").setAttribute("src", venImgs)
@@ -66,8 +64,10 @@ function showSingleVenue(aVenue) {
     //button text
         clone.querySelector(".venue-text").textContent=venText.toUpperCase();
 }
+     btnVenues.appendChild(clone);
 
-    btnVenues.appendChild(clone);
+
+
 
     //fetch the content for each venue
 
@@ -109,13 +109,25 @@ function showSingleVenue(aVenue) {
 
     }
 
-    clone2.querySelector(".readmore").href="form.html?id=" + aVenue.id;
+    clone2.querySelector(".readmore a").href="form.html?id=" + aVenue.id;
+    clone2.querySelector(".evt-btn a").textContent= venText.toUpperCase() + " EVENTS";
     concVenues.appendChild(clone2);
 
 
+}
 
- }
 fetchVenues();
+
+// make user click on the buttons(.venue-text) and it displays only that venue
+    document.querySelector(".section").addEventListener("click", blabla)
+    function blabla(){
+        if (venText == aVenue.title) {
+            document.querySelector(".concert-modal").classList.remove("hide");
+        } else {
+            document.querySelector(".concert-modal").classList.add("hide");
+        }
+     }
+
 
 // burger menu
 let burgerMenu = document.querySelector(".burger-menu");
@@ -143,9 +155,19 @@ function closeMenu() {
     navItems.classList.add("hide");
     navMenu.style.transition = "0.5s";
 }
+
+//buttons animation
+
+//if ($('.readmore').hasClass('highlighted') == false) {
+//        $('.readmore').addClass('highlighted') }else {$('.readmore').removeClass('highlighted')}
+//
+//    if ($('.readmore').hasClass('highlighted')) {
+//        $('.readmore').removeClass('highlighted')
+//    }
+
 //function filter(myFilter) {
-//    document.querySelectorAll("main .cat-section").forEach(section => {
-//        if (section.id == myFilter || myFilter == "all") {
+//    document.querySelectorAll(".concert-modal").forEach(section => {
+//        if (venText == aVenue.title) {
 //            section.classList.remove("hide");
 //        } else {
 //            section.classList.add("hide");
