@@ -61,7 +61,7 @@ body#performer{
     padding: 20px;
     text-align: center;
 }
-button {
+.menu button {
     display: block;
     width: 55vw;
     height: 65px;
@@ -151,11 +151,15 @@ button a {
     background: rgba(255,255,255,0.95)
 }
 .readmore{
-    color: black;
-    text-transform: uppercase;
+    padding: 3vw;
+    background: none;
+    border-radius: 0%;
+    border-color: #B9B5B5;
+    border-width: thin;
+    width: 25vw;
+    font-size: 15px;
+    cursor: pointer;
 }
-
-
 /* burger menu */
 .nav-items {
     padding: 10px;

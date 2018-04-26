@@ -21,7 +21,14 @@ function fetchVenues() {
 function showVenues(data) {
         //console.log(data)
         data.forEach(showSingleVenue);
+
+    //header text
+    let first = data[0]
+    let headerTxt = first._embedded["wp:term"][0][0].name;
+    document.querySelector(".header-text").textContent=headerTxt.toUpperCase() + " VENUES";
     }
+
+
 
 function showSingleVenue(aVenue) {
 
@@ -65,7 +72,7 @@ function showSingleVenue(aVenue) {
     //fetch the content for each venue
 
     let clone2 = concTemplate.cloneNode(true);
-    //let clone3 = headerTemplate.cloneNode(true);
+
 
     clone2.querySelector("h1").textContent = aVenue.title.rendered;
     clone2.querySelector(".desciption").innerHTML = aVenue.content.rendered;
@@ -91,20 +98,20 @@ function showSingleVenue(aVenue) {
     }
     else if (aVenue.acf.theatre===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "theatre";
-        //clone3.querySelector(".header-text").textContent= "THEATRE VENUES";
+
     }
     else if (aVenue.acf.cinema===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "cinema";
-        //clone3.querySelector(".header-text").textContent= "CINEMA VENUE";
+
     }
     else if (aVenue.acf.concert===true){
         clone2.querySelector(".venue").textContent = "Venue: " + "concert";
-        //clone3.querySelector(".header-text").textContent= "CONCERT VENUES";
+
     }
 
     clone2.querySelector(".readmore").href="form.html?id=" + aVenue.id;
     concVenues.appendChild(clone2);
-    //headerVenues.appendChild(clone3);
+
 
 
  }
