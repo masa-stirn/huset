@@ -48,7 +48,7 @@ function showPost(e){
             $('.button').addClass('hide');
             document.querySelector('.free').textContent = "FREE";
         }
-
+  document.querySelector('.moreInfo').innerHTML= e.content.rendered
 }
 
 

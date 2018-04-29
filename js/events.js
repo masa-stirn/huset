@@ -47,7 +47,7 @@ function showEvents(evt) {
             clone.querySelector('.free').textContent = "FREE";
         }
 
-        /*modal handling*/
+        /*modal handling
 
         let modal = document.querySelector('.modal')
 
@@ -64,7 +64,7 @@ function showEvents(evt) {
             modal.querySelector('.contentMe').innerHTML = p[0].content.rendered
             modal.addEventListener('click', () => modal.classList.add('hide'))
             window.onscroll = () => modal.classList.add('hide')
-        }
+        }*/
 
 
         main.appendChild(clone)

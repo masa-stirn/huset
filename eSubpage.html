@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,63 +10,65 @@
 </head>
 
 <body>
-<div class="loader-wrapper">
-	<div class="loader">
-    <div class="roller"></div>
-    <div class="roller"></div>
-  </div>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="roller"></div>
+            <div class="roller"></div>
+        </div>
 
-  <div id="loader2" class="loader">
-    <div class="roller"></div>
-    <div class="roller"></div>
-  </div>
+        <div id="loader2" class="loader">
+            <div class="roller"></div>
+            <div class="roller"></div>
+        </div>
 
-  <div id="loader3" class="loader">
-    <div class="roller"></div>
-    <div class="roller"></div>
-  </div>
-</div>
-<header>
-    <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
-
- </header>
-   <div class="mainNav">
-   <div class="close">&times;</div>
-    <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
-     <a href="events.html">Events</a>
-     <a href="eContacts.html">Contacts</a>
-     <a href="eFaq.html">FAQ</a>
-   </div>
+        <div id="loader3" class="loader">
+            <div class="roller"></div>
+            <div class="roller"></div>
+        </div>
+    </div>
+    <header>
+        <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
+        <a href="events.html" class="back"> Back to Events</a>
+    </header>
+    <div class="mainNav">
+        <div class="close">&times;</div>
+        <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
+        <a href="events.html">Events</a>
+        <a href="eContacts.html">Contacts</a>
+        <a href="eFaq.html">FAQ</a>
+    </div>
 
 
     <main>
     </main>
 
 
-    <nav class="secondary">
-    <a href="events.html">E</a>
-    <a href="volunteer.html">V</a>
-    <a href="performer.html">P</a>
+   <nav class="secondary">
+    <a href="events.html" class="icon"><img src="images/events.png" alt="events">Events</a>
+    <a href="volunteer.html" class="icon">Volunteers</a>
+    <a href="performer.html" class="icon"><img src="images/performer.png" alt="performer">
+    Performers</a>
     </nav>
 
- <div class="modal hide">
-   <h2></h2>
-    <p class="contentMe"></p>
+    <div class="modal hide">
+        <h2></h2>
+        <p class="contentMe"></p>
     </div>
 
-       <section>
+    <section class="sub">
         <h1>EVENT NAME</h1>
-           <h6><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span>  at <span class="time">TIME</span>.00</h6>
-              <div class="thumb"><img class="artist" src="" alt="artist pic"></div>
-               <h6 class="genre">GENRE</h6>
-               <h6><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h6><button type="button">BUY TICKET</button>
-               <div class="more"><a href="eSubpage.html?id="></a>more info
-                  </div>
+        <h3><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span> at <span class="time">TIME</span>.00</h3>
+        <div class="thumb"><img class="artist" src="" alt="artist pic"></div>
+        <div class="subinfo info">
+            <h3 class="genre">GENRE</h3>
+            <h3><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h3><button type="button">BUY TICKET</button></div>
+        <p class="moreInfo"></p>
     </section>
 
 
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/eSub.js"></script>
 </body>
+
 </html>
