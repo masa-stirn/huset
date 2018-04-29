@@ -24,7 +24,7 @@ function showEvents(evt) {
         let clone = template.cloneNode(true);
         let picPath = e.acf.event_picture.sizes.medium
         console.log(e.id)
-        document.querySelectorAll('section a').forEach((s)=>{s.href="eSubpage.html?id="+e.id;})
+        clone.querySelector('section a').href="eSubpage.html?id="+e.id;
 
 
 
