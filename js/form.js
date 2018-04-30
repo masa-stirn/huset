@@ -1,4 +1,4 @@
- //advance filters/ modal
+ //advance filters
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
 
@@ -9,7 +9,17 @@
 
     function showVenues(someData){
         console.log(someData)
-        document.querySelector("h1").textContent=someData.title.rendered
-        //fatch image and price?
-        //write the for
+        document.querySelector(".header-text2").textContent=someData.title.rendered
+
     }
+var form =  document.querySelector('form');
+if (typeof(form) != 'undefined' && form != null)
+{
+  let submit = document.querySelector("input.readmore")
+
+    submit.addEventListener("click", ()=>{
+    submit.href="booked.html"
+        console.log("i rock")
+})
+}
+

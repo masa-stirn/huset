@@ -9,7 +9,7 @@
 hide{
     display: none;
 }
-h1, h2,h3,p,a{
+h1, h2,h3,p,a, form, input{
     font-family: "roboto", sans-serif;
 }
 h1.title{
@@ -26,7 +26,7 @@ h2{
     font-weight: 100;
     font-size: 20px;
 }
-h3{
+h3, form{
     font-weight: 100;
     font-size: 15px;
 }
@@ -83,7 +83,7 @@ body#performer{
     font-size: 20px;
 }
 
-/* single venue page */
+/* specific venue page: concert, theatre, cinema */
 /*heading*/
 #header-venue{
     width: 100vw;
@@ -104,7 +104,7 @@ body#performer{
     padding-top: 31px;
     width: 19px;
 }
-.header-text{
+.header-text, .head-txt{
     position: absolute;
     top: 80px;
     left:0;
@@ -112,6 +112,44 @@ body#performer{
     text-align: center;
     color: #fff;
 }
+.head-txt{
+    top:65px;
+}
+.header-text2{
+    position: absolute;
+    top: 95px;
+    left:0;
+    right:0;
+    text-align: center;
+    color: #fff;
+}
+article{
+    margin-top: 30px;
+}
+
+/* form */
+form * {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 1px;
+}
+form {
+   width: 60vw;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+
 /*body*/
 
 #btn-venues{
@@ -135,21 +173,7 @@ body#performer{
 .conc-img{
     width:100%;
 }
-.venue-text{
-    position: absolute;
-    bottom: 0;
-    color: #000;
-    left:0;
-    right: 0;
-    top:0;
-    background-color: rgba(255,255,255,0.5);
-    color: #000;
-    font-family: sans-serif;
-    font-weight: 600;
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .concert-modal h3{
     padding: 10px;
 }
@@ -168,13 +192,28 @@ body#performer{
     border-width: thin;
     cursor: pointer;
 }
-.readmore a {
+.venue-box .readmore{
+    margin-top: 10px;
+}
+input.readmore{
+    text-transform: uppercase;
+    max-width: 50%;
+    height: 40px;
+}
+.venue-text, input {
     font-size: 15px;
     color: #000;
     font-weight: 300;
 }
-.heighlited{
-    background: linear-gradient(to bottom, rgba(100,43,115, 0.5), rgba(198,66,110, 0.5));
+.venue-text{
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+.highlited{
+    background: linear-gradient(to bottom, rgba(100,43,115, 1), rgba(198,66,110, 1));
+}
+.white{
+    color: #fff;
 }
 /* burger menu */
 .nav-items {
