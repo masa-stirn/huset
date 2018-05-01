@@ -43,6 +43,10 @@ a {
 .bold{
     font-weight: 700;
 }
+.underline{
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* choose venue page */
 body#performer{
       background: url(../images/performer-stage.jpg);
@@ -241,11 +245,12 @@ input.readmore{
     position: absolute;
     z-index: 1;
     height: 100%;
-    background: linear-gradient(to right, #642b73, #c6426e);;
+    background: linear-gradient(to right, #642b73, #c6426e);
     box-shadow: 10px #505050;
 }
 
 .main-nav a {
+    color: #fff;
     display: block;
     padding: 20px;
     border-bottom: 1px solid white;
@@ -260,7 +265,30 @@ input.readmore{
     overflow: hidden;
 }
 
-a {
-    color: #ffff;
-    text-decoration: none;
+/* booked page */
+.booked {
+    position: relative;
+    background: linear-gradient(to right, #642b73, #c6426e);
+    color: white;
+    min-height: 220px;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px;
+    top: 50px;
+}
+.booked img {
+    position: absolute;
+    width: 50px;
+    top: -20px;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.booked p{
+    padding-top: 50px;
+}
+.booked-btn{
+    position: absolute;
+    top: 480px;
+    left: 20px;
 }

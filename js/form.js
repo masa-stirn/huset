@@ -8,18 +8,8 @@
             .then(showVenues)
 
     function showVenues(someData){
-        console.log(someData)
+        console.log(someData.title.rendered)
         document.querySelector(".header-text2").textContent=someData.title.rendered
 
-    }
-var form =  document.querySelector('form');
-if (typeof(form) != 'undefined' && form != null)
-{
-  let submit = document.querySelector("input.readmore")
-
-    submit.addEventListener("click", ()=>{
-    submit.href="booked.html"
-        console.log("i rock")
-})
-}
-
+        document.querySelector("#btn").href="booked.html?venue="+someData.title.rendered;
+        }
