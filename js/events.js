@@ -23,9 +23,12 @@ function showEvents(evt) {
 
         console.log('im cloning')
         clone.querySelector('h1').textContent = e.title.rendered;
+
         clone.querySelector('.day').textContent = e.acf.date.substring(6, 8);
         clone.querySelector('.month').textContent = e.acf.date.substring(4, 6);
         clone.querySelector('.year').textContent = e.acf.date.substring(0, 4);
+
+
         /*use sub string for presentation*/
         clone.querySelector('.time').textContent = e.acf.event_time;
         clone.querySelector('img').setAttribute('src', picPath)

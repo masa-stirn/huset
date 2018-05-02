@@ -97,16 +97,20 @@ body#performer{
 #header-venue .gradient{
     max-height: 150px;
 }
-.gradient img{
+.header-icons{
+
     width: 22px;
     height: auto;
     padding-top: 33px;
     padding-right: 30px;
     float: right;
+
 }
-.gradient img:first-child{
+.header-icons:first-child{
+
     padding-top: 31px;
     width: 19px;
+
 }
 .header-text, .head-txt{
     position: absolute;
@@ -129,6 +133,7 @@ body#performer{
 }
 article{
     margin-top: 30px;
+    margin-bottom: 8vh;
 }
 
 /* form */
@@ -291,4 +296,36 @@ input.readmore{
     position: absolute;
     top: 480px;
     left: 20px;
+}
+/*FOOTER*/
+
+.awesomeMenu {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    background: linear-gradient(to right, #642b73, #c6426e);
+    height: 8vh;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding-top:10px;
+}
+
+.event p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.event-icon {
+    height: 20px;
+}
+
+.awesomeIcon {
+    display: flex;
+    justify-content: space-around;
 }
