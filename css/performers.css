@@ -204,7 +204,7 @@ input[type="date"]:before {
 .venue-box .readmore{
     margin-top: 10px;
 }
-input.readmore{
+form .readmore{
     text-transform: uppercase;
     max-width: 50%;
     height: 40px;
