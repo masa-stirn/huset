@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUSET</title>
     <link rel="stylesheet" href="css/events.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -25,53 +26,71 @@
   </div>
 </div>
 <header>
-    <nav><a href="eBurger.html">&#9776</a></nav>
-    <div class="search"></div></header>
-<div class="filters"><button class="genreFilter" type="button">GENRE</button>
-<button class="dateFilter"  type="button">DATE</button>
+    <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
+    <div class="iconNav"><img src="images/messages.svg" alt="messages"><img src="images/searchGrey.svg" alt="search"></div>
+
+<div class="filters">
+<input class="dateFilter" type="date" name="date" placeholder="DATE">
+<button class="genreFilter" type="button">GENRE</button>
 <button class="venueFilter"  type="button">VENUE</button></div>
 
+    </header>
+
+   <div class="mainNav">
+   <div class="close">&times;</div>
+    <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
+     <a href="events.html">Events</a>
+     <a href="eContacts.html">Contacts</a>
+     <a href="eFaq.html">FAQ</a>
+   </div>
    <div class="sideNav genreNav">
-       <div class="gFilter rock_metal">ROCK and METAL</div>
-       <div class="gFilter poetry">POETRY</div>
-       <div class="gFilter alternative">ALTERNATIVE</div>
-       <div class="gFilter cinema">CINEMA</div>
-       <div class="gFilter open_mic">OPEN MIC</div>
+      <div class="filterTitle">GENRE</div>
+       <div class="gFilter rock_metal">Rock and Metal</div>
+       <div class="gFilter poetry">Poetry</div>
+       <div class="gFilter alternative">Alternative</div>
+       <div class="gFilter cinema">Cinema</div>
+       <div class="gFilter open_mic">Open mic</div>
+       <div class="gFilter foodie">Foodie</div>
+
    </div>
 
 
 
    <div class="sideNav venueNav">
-       <div class="vFilter stardust">STARDUST</div>
-       <div class="vFilter musikcafèen">MUSIKCAFÈEN</div>
-       <div class="vFilter bastarden">BASTARDEN CAFE</div>
-       <div class="vFilter"></div>
-       <div class="vFilter"></div>
-   </div>
-    <main>
-    </main>
+            <div class="filterTitle">VENUES</div>
 
+       <div class="vFilter stardust">Stardust</div>
+       <div class="vFilter musikcafèen">Musikcafèen</div>
+       <div class="vFilter bastarden">Bastarden Café</div>
+       <div class="vFilter stage">Stage</div>
+       <div class="vFilter huset_biograf"> Huset Biograf</div>
+   </div>
+   <div class="backEvt hide"><h3>Show all Events</h3></div>
+
+    <main>
+
+    </main>
+<h3 class="alert hide">Oops, seems like there are no matches to your filter</h3>
 
     <nav class="secondary">
-    <a href="events.html">E</a>
-    <a href="volunteer.html">V</a>
-    <a href="performer.html">P</a>
+    <a href="events.html" class="icon"><img src="images/events.png" alt="events">Events</a>
+    <a href="volunteer.html" class="icon"><img src="images/volunteer.png" alt="volunteer">Volunteers</a>
+    <a href="performer.html" class="icon"><img src="images/performer.png" alt="performer">
+    Performers</a>
     </nav>
 
- <div class="modal hide">
-   <h2></h2>
-    <p class="contentMe"></p>
-    </div>
+
 
     <template>
        <section>
+       <a href="eSubpage.html?id=">
         <h1>EVENT NAME</h1>
-           <h3><span class="date"> </span> <span class="day"> </span>/<span class="month"></span>/<span class="year"></span> at <span class="time">TIME</span>.00</h3>
-               <img src="" alt="artist pic">
-               <h4 class="genre">GENRE</h4>
-               <h4><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h4><button type="button">BUY TICKET</button>
-               <div class="more">more info
-                  </div>
+           <h3><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span>  at <span class="time">TIME</span>.00</h3>
+              <div class="thumb"><img class="" src="" alt="event pic"></div></a><div class="info">
+               <h3 class="genre">GENRE</h3>
+               <h3><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h3>
+              <a href="eSubpage.html?id="> <h3 class="more">more info</h3></a><button type="button">BUY TICKET</button></div>
+
     </section>
     </template>
 
@@ -79,5 +98,7 @@
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/events.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>
