@@ -340,7 +340,7 @@ span {
     grid-template-columns: 30% 70%;
     grid-template-rows: repeat(4, 1fr);
     height: 200px;
-    padding: 15px;
+    padding: 35px;
     border-bottom: 1px solid;
 }
 
