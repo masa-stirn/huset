@@ -9,8 +9,9 @@ function fetchPerformerEvents(){
 //fetch data from json
 // fetch only the categories that match
     let urlParams = new URLSearchParams(window.location.search)
-        let tag = urlParams.get("tag");
-        fetch("http://test.masawudesign.dk/wp-json/wp/v2/events?_embed&per_page=2&page="+page+"&tag="+tag+"&order=asc")
+        let tag = urlParams.get("tags");
+    console.log(tag)
+        fetch("http://test.masawudesign.dk/wp-json/wp/v2/events?_embed&per_page=2&page="+page+"&tags="+tag+"&order=asc")
         .then(e => e.json())
         .then(showAllEvents)
     }
@@ -19,6 +20,7 @@ function showAllEvents(getAllMatchingCatEventsArray){
     //console.log(getAllMatchingCatEventsArray)
  getAllMatchingCatEventsArray.forEach(showSingleCatEvent)
    //header text
+    console.log(getAllMatchingCatEventsArray)
    let headerTxt = getAllMatchingCatEventsArray[0].acf.venue
     document.querySelector(".header-text").textContent= headerTxt.toUpperCase() + " EVENTS"
     lookingForData = false;

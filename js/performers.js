@@ -100,7 +100,7 @@ function showSingleVenue(aVenue) {
 
     clone2.querySelector(".readmore a").href="form.html?id=" + aVenue.id;
     clone2.querySelector(".evt-btn a").textContent= venText.toUpperCase() + " EVENTS";
-    clone2.querySelector(".performer-evt-btn").href="performer-events.html?tag="+aVenue.tags;
+    clone2.querySelector(".performer-evt-btn").href="performer-events.html?tags="+aVenue.tags;
 
     console.log(aVenue.tags)
 
