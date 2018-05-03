@@ -266,6 +266,7 @@ h1 {
     position: absolute;
     margin-top: 306px;
     margin-bottom: 8vh;
+    width: 100%;
 }
 
 .numNotification {
