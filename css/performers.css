@@ -332,3 +332,36 @@ form .readmore{
     display: flex;
     justify-content: space-around;
 }
+
+/* show events page */
+
+#performer-evt-section article{
+    border-bottom: solid 1px black;
+    border-bottom-width: thin;
+    margin-top: 3vw;
+    margin-left: 2.5vw;
+    padding-top: 8vw;
+    padding-left: 4vw;
+    padding-bottom: 10vw;
+    width: 88vw;
+    position: relative;
+}
+div.thumb {
+    position: relative;
+    overflow: hidden;
+    width: 70vw;
+    height: 25vh;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    padding-left: 6vw;
+    margin-bottom: 20px;
+}
+#performer-evt-section h1{
+    text-align: left;
+}
+.buy-btn{
+    width: 33vw;
+    position: absolute;
+    right: 1px;
+    bottom: 50px;
+}
