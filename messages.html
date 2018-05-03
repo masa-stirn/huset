@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUSET</title>
+    <link rel="stylesheet" href="css/volunteer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
+
+<body>
+    <div class="container">
+        <section>
+            <div class="burger-menu">&#9776;</div>
+            <nav class="main-nav close">
+                <div class="nav-items"> <a href="#" class="closebtn">&times;</a>
+                    <a href="login.html"><img class="logo" alt="logo" src="images/Huset_logo_9_W.png"></a> <a href="volunteer.html">My calendar</a> <a href="volunteer.html">FAQ</a> <a href="volunteer.html">Contact</a> </div>
+            </nav>
+        </section>
+        <div id="wrap-it">
+            <div class="top-view">
+                <div class="color-layer">
+                    <a href="#"><img class="search" src="images/Group%2024.png" alt="search-icon"></a>
+                    <div class="header">
+                        <h1 class="volunteer-name">Messages</h1>
+                        <div class="profile-container"> <img class="profile main" alt="Avatar">
+                            <div class="notifications"><span class="numNotification">8</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="messagesMain">
+            <a href="volunteer.html"><img class="button-back" src="images/Group%2041.png" alt="back-arrow"> </a>
+        </section>
+        <!--        FOOTER-->
+        <footer class="awesomeMenu">
+            <div class="awesomeIcon">
+                <div class="event"> <img class="event-icon" src="images/event-01.png" alt="event-icon">
+                    <p>Eventseeker</p>
+                </div>
+                <div class="event"><img class="event-icon" src="images/volunteer.png" alt="volunteer-icon">
+                    <p>Volunteer</p>
+                </div>
+                <div class="event"><img class="event-icon" src="images/performer.png" alt="performer-icon">
+                    <p>Performer</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- TEMPLATE -->
+    <template class="messageTemplate">
+        <article class="messagesContainer"> <img class="profileMessages" src="" alt="user-profile">
+            <div class="messagesText">
+                <h3 class="messagesName"></h3>
+                <p class="messagesText1"> </p>
+                <div class="messagesDate"> <span class="day"></span> <span class="month"></span> <span class="year"></span> </div>
+            </div>
+        </article>
+    </template>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+<script src="javasmessages.js"></script>
+
+</html>
