@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: BigJohn;
+    src: url(../fonts/big-john.otf);
+}
+hide{
+    display: none;
+}
+h1, h2,h3,p,a, form, input{
+    font-family: "roboto", sans-serif;
+}
+h1.title{
+    font-family: "BigJohn", sans-serif;
+    font-size: 35px;
+}
+h1{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 24px;
+}
+h2{
+    font-weight: 100;
+    font-size: 20px;
+}
+h3, form{
+    font-weight: 100;
+    font-size: 15px;
+}
+p{
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+}
+.bold{
+    font-weight: 700;
+}
+.underline{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.logo{
+    width: 100px;
+}
+/* choose venue page */
+body#performer{
+      background: url(../images/performer-stage.jpg);
+    height: 100vh;
+}
+.gradient {
+    background: linear-gradient(to bottom, rgba(100,43,115, 0.5), rgba(198,66,110, 0.5));
+    height: 100vh;
+    width: 100vw;
+}
+.heading{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+.heading h1{
+    max-width: 80vw;
+    display: flex;
+    margin:0 auto
+}
+.heading h2{
+    padding: 20px;
+    text-align: center;
+}
+.menu button {
+    display: block;
+    width: 55vw;
+    height: 65px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 2px 1px 3px rgba(0, 0, 0, .2);
+}
+.menu button a {
+    color: rgb(100,43,115);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+/* specific venue page: concert, theatre, cinema */
+/*heading*/
+#header-venue{
+    width: 100vw;
+    height: 150px;
+    background: url(../images/audience-band-celebration.png);
+}
+#header-venue .gradient{
+    max-height: 150px;
+}
+.header-icons{
+
+    width: 22px;
+    height: auto;
+    padding-top: 33px;
+    padding-right: 30px;
+    float: right;
+
+}
+.header-icons:first-child{
+
+    padding-top: 31px;
+    width: 19px;
+
+}
+.header-text, .head-txt{
+    position: absolute;
+    top: 80px;
+    left:0;
+    right:0;
+    text-align: center;
+    color: #fff;
+}
+.head-txt{
+    top:65px;
+}
+.header-text2{
+    position: absolute;
+    top: 95px;
+    left:0;
+    right:0;
+    text-align: center;
+    color: #fff;
+}
+article{
+    margin-top: 30px;
+    margin-bottom: 8vh;
+}
+
+/* form */
+form * {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 1px;
+}
+form {
+   width: 60vw;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+
+/*body*/
+
+#btn-venues{
+   margin: 0 auto;
+ text-align: center;
+}
+.venue-box{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.venue-imgs{
+    max-width: 30vw;
+}
+.concert-modal h1, .concert-modal div, .concert-modal p {
+   padding: 10px;
+}
+.concert-modal button{
+    margin-bottom: 10px;
+}
+.conc-img{
+    width:100%;
+}
+
+.concert-modal h3{
+    padding: 10px;
+}
+.concert-modal {
+    background: rgba(255,255,255,0.95)
+}
+/* buttons*/
+.btns{
+    margin: 0 auto;
+}
+.readmore{
+    padding: 3vw;
+    background: none;
+    border-radius: 0%;
+    border-color: #B9B5B5;
+    border-width: thin;
+    cursor: pointer;
+}
+.venue-box .readmore{
+    margin-top: 10px;
+}
+form .readmore{
+    text-transform: uppercase;
+    max-width: 50%;
+    height: 40px;
+}
+.venue-text, input {
+    font-size: 15px;
+    color: #000;
+    font-weight: 300;
+}
+.venue-text{
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+.highlited{
+    background: linear-gradient(to bottom, rgba(100,43,115, 1), rgba(198,66,110, 1));
+}
+.white{
+    color: #fff;
+}
+/* burger menu */
+.nav-items {
+    padding: 10px;
+}
+
+.closebtn {
+    font-size: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.burger-menu {
+    z-index: 1;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.main-nav {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    background: linear-gradient(to right, #642b73, #c6426e);
+    box-shadow: 10px #505050;
+}
+
+.main-nav a {
+    color: #fff;
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.open {
+    width: 60%;
+}
+
+.close {
+    width: 0;
+    overflow: hidden;
+}
+
+/* booked page */
+.booked {
+    position: relative;
+    background: linear-gradient(to right, #642b73, #c6426e);
+    color: white;
+    min-height: 220px;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px;
+    top: 50px;
+}
+.booked img {
+    position: absolute;
+    width: 50px;
+    top: -20px;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.booked p{
+    padding-top: 50px;
+}
+.booked-btn{
+    position: absolute;
+    top: 480px;
+    left: 20px;
+}
+/*FOOTER*/
+
+.awesomeMenu {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    background: linear-gradient(to right, #642b73, #c6426e);
+    height: 8vh;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding-top:10px;
+}
+
+.event p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.event-icon {
+    height: 20px;
+}
+
+.awesomeIcon {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* show events page */
+
+#performer-evt-section article{
+    border-bottom: solid 1px black;
+    border-bottom-width: thin;
+    margin-top: 3vw;
+    margin-left: 2.5vw;
+    padding-top: 8vw;
+    padding-left: 4vw;
+    padding-bottom: 10vw;
+    width: 88vw;
+    position: relative;
+}
+div.thumb {
+    position: relative;
+    overflow: hidden;
+    width: 70vw;
+    height: 25vh;
+    padding-top: 4vw;
+    padding-bottom: 3vw;
+    padding-left: 6vw;
+    margin-bottom: 20px;
+}
+#performer-evt-section h1{
+    text-align: left;
+}
+.buy-btn{
+    width: 33vw;
+    position: absolute;
+    right: 1px;
+    bottom: 50px;
+}

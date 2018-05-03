@@ -1,8 +1,18 @@
 const evtPath = "http://designki.dk/CMS/wordpress/wp-json/wp/v2/events?_embed"
 let template = document.querySelector("#template-events").content;
 let popup = document.querySelector(".popup");
+
 let pList = 'http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?slug=';
 let section = document.querySelector(".entry-container");
+
+
+
+
+
+popup.addEventListener("click", function(){
+    popup.classList.remove("hide");
+
+})
 
 
 function fetchEvents() {
