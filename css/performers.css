@@ -47,6 +47,9 @@ a {
     text-decoration: underline;
     cursor: pointer;
 }
+.logo{
+    width: 100px;
+}
 /* choose venue page */
 body#performer{
       background: url(../images/performer-stage.jpg);
