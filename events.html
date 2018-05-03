@@ -27,10 +27,15 @@
 </div>
 <header>
     <nav class="burgerNav"><img src="images/burger_menu.png" alt="burger menu" class="burger"></nav>
+    <div class="iconNav"><img src="images/messages.svg" alt="messages"><img src="images/search.svg" alt="search"></div>
 
-<div class="filters"><button class="genreFilter" type="button">GENRE</button>
-<button class="dateFilter"  type="button">DATE</button>
-<button class="venueFilter"  type="button">VENUE</button></div>  </header>
+<div class="filters">
+<input class="dateFilter" type="date" name="date" placeholder="DATE">
+<button class="genreFilter" type="button">GENRE</button>
+<button class="venueFilter"  type="button">VENUE</button></div>
+
+    </header>
+
    <div class="mainNav">
    <div class="close">&times;</div>
     <img src="images/huset-logo_white.png" alt="huset logo" class="logo">
@@ -45,6 +50,8 @@
        <div class="gFilter alternative">Alternative</div>
        <div class="gFilter cinema">Cinema</div>
        <div class="gFilter open_mic">Open mic</div>
+       <div class="gFilter foodie">Foodie</div>
+
    </div>
 
 
@@ -58,14 +65,16 @@
        <div class="vFilter stage">Stage</div>
        <div class="vFilter huset_biograf"> Huset Biograf</div>
    </div>
-    <main>
-    <h3 class="alert">Oops, seems like there are no matches to your filter</h3>
-    </main>
+   <div class="backEvt hide"><h3>Show all Events</h3></div>
 
+    <main>
+
+    </main>
+<h3 class="alert hide">Oops, seems like there are no matches to your filter</h3>
 
     <nav class="secondary">
     <a href="events.html" class="icon"><img src="images/events.png" alt="events">Events</a>
-    <a href="volunteer.html" class="icon">Volunteers</a>
+    <a href="volunteer.html" class="icon"><img src="images/volunteer.png" alt="volunteer">Volunteers</a>
     <a href="performer.html" class="icon"><img src="images/performer.png" alt="performer">
     Performers</a>
     </nav>
@@ -77,9 +86,10 @@
        <a href="eSubpage.html?id=">
         <h1>EVENT NAME</h1>
            <h3><span class="date"> </span> <span class="day"> </span> / <span class="month"></span> / <span class="year"></span>  at <span class="time">TIME</span>.00</h3>
-              <div class="thumb"><img class="" src="" alt="artist pic"></div></a><div class="info">
+              <div class="thumb"><img class="" src="" alt="event pic"></div></a><div class="info">
                <h3 class="genre">GENRE</h3>
-               <h3><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h3><button type="button">BUY TICKET</button></div>
+               <h3><span class="venue">VENUE</span>, <span class="price"></span><span class="free"> DKK</span></h3>
+              <a href="eSubpage.html?id="> <h3 class="more">more info</h3></a><button type="button">BUY TICKET</button></div>
 
     </section>
     </template>
@@ -88,5 +98,7 @@
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/events.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 </html>

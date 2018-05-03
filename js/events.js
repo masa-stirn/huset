@@ -1,9 +1,11 @@
-let evtPath = "http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?_embed"
+let page = 1;
+let lookingForData = false;
+let evtPath = "http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?_embed&per_page=5&page="
 let template = document.querySelector('template').content;
 let main = document.querySelector('main');
 let pList = 'http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?slug='
 let alert = document.querySelector('.alert');
-
+let evtPathAll = "http://ferrarigiada.com/kea/07-cms/wordpress/wp-json/wp/v2/events?_embed&per_page=25"
 
 
 
@@ -15,19 +17,19 @@ $(window).ready(() => {
 /*REST API*/
 
 function fetchEvents() {
+    lookingForData = true;
+
     console.log('im fetching')
-    fetch(evtPath).then(e => e.json()).then(showEvents)
+    fetch(evtPath+page).then(e => e.json()).then(showEvents)
 }
 
 function showEvents(evt) {
+    lookingForData = false;
     evt.forEach((e) => {
         let clone = template.cloneNode(true);
         let picPath = e.acf.event_picture.sizes.medium
         console.log(e.id)
-        clone.querySelector('section a').href="eSubpage.html?id="+e.id;
-
-
-
+        clone.querySelectorAll('section a').forEach((a)=>{a.href="eSubpage.html?id="+e.id;})
 
         console.log('im cloning')
         clone.querySelector('h1').textContent = e.title.rendered;
@@ -47,29 +49,7 @@ function showEvents(evt) {
             clone.querySelector('.free').textContent = "FREE";
         }
 
-        /*modal handling
-
-        let modal = document.querySelector('.modal')
-
-        clone.querySelector(".more").addEventListener('click', () => {
-            modal.classList.remove('hide');
-            fetch(pList + e.slug).then(result => result.json()).then(productID => showModal(productID, clone))
-        });
-
-        function showModal(p) {
-            console.log(p)
-
-            modal.querySelector('h2').textContent = p[0].title.rendered;
-
-            modal.querySelector('.contentMe').innerHTML = p[0].content.rendered
-            modal.addEventListener('click', () => modal.classList.add('hide'))
-            window.onscroll = () => modal.classList.add('hide')
-        }*/
-
-
         main.appendChild(clone)
-
-
 
     })
 }
@@ -86,7 +66,12 @@ let count = 0;
 function Filter(genre, filter) {
     console.log('yo')
     count = 0;
-    alert.style.cssText = "display:none;";
+    alert.classList.add('hide');
+    $('.backEvt').removeClass('hide');
+
+    main.style.cssText = "margin-top:25vh;"
+
+
     let sections = document.querySelectorAll('section');
     let length = sections.length;
     sections.forEach((s) => {
@@ -101,16 +86,17 @@ function Filter(genre, filter) {
 
             if (length == count)
 
-            {
-
-                alert.style.cssText = "display:block;"
-
-
-
-            }
+            {alert.classList.remove('hide')}
         }
     })
-
+ $('.backEvt').on('click', ()=>{
+            main.innerHTML = " ";
+            main.style.cssText = "margin-top:15vh;"
+            fetchEvents();
+            console.log(this)
+            $('.backEvt').addClass('hide');
+            $('.alert').addClass('hide');
+        });
 }
 
 
@@ -149,14 +135,15 @@ $('.genreFilter').on('click', () => {
             } else if (g.classList.contains('open_mic')) {
                 Filter('open mic', 'genre');
             }
+            else if (g.classList.contains('foodie')) {
+                Filter('foodie', 'genre');
+            }
         })
 
     })
 
 
 })
-
-
 
 $('.venueFilter').on('click', () => {
     if ($('.venueFilter').hasClass('highlighted') == false) {
@@ -209,3 +196,113 @@ $('.burger').on('click', () => {
 $('.close').on('click', () => {
     $('.mainNav').removeClass('slideMeRight')
 })
+
+/*date picker*/
+
+let myDate = document.querySelector('input')
+
+myDate.addEventListener('input', ()=>{
+
+    console.log(myDate.value);
+
+    fetch(evtPathAll).then(e => e.json()).then(filterEvents)
+
+    function filterEvents(evt){
+
+        main.innerHTML = " "
+         $('.backEvt').removeClass('hide');
+            main.style.cssText = "margin-top:25vh;"
+
+        evt.forEach((e)=>{
+
+            let eDate = e.acf.date.substring(0, 4) + "-" + e.acf.date.substring(4, 6)+ "-"+e.acf.date.substring(6, 8);
+
+
+                            console.log(myDate.value +" = "+ eDate)
+
+            if (myDate.value == eDate){
+                console.log(myDate.value +" = "+ eDate)
+
+                count++
+
+        let clone = template.cloneNode(true);
+        let picPath = e.acf.event_picture.sizes.medium
+        console.log(e.id)
+        clone.querySelector('section a').href="eSubpage.html?id="+e.id;
+
+        clone.querySelector('h1').textContent = e.title.rendered;
+        clone.querySelector('.day').textContent = e.acf.date.substring(6, 8);
+        clone.querySelector('.month').textContent = e.acf.date.substring(4, 6);
+        clone.querySelector('.year').textContent = e.acf.date.substring(0, 4);
+        /*use sub string for presentation*/
+        clone.querySelector('.time').textContent = e.acf.event_time;
+        clone.querySelector('img').setAttribute('src', picPath)
+        clone.querySelector('.venue').textContent = e.acf.venue;
+        clone.querySelector('.genre').textContent = e.acf.genre;
+
+        if (e.acf.free_event == false) {
+            clone.querySelector('.price').textContent = e.acf.event_price;
+        } else {
+            $('.button').addClass('hide');
+            clone.querySelector('.free').textContent = "FREE";
+        }
+
+
+                main.appendChild(clone)
+
+
+
+
+                $('.backEvt').on('click', ()=>{
+            main.innerHTML = " ";
+            main.style.cssText = "margin-top:15vh;"
+            fetchEvents();
+            console.log(this)
+            $('.backEvt').addClass('hide')
+        });
+
+            }
+       else {/*console.log(myDate.value +" not "+ eDate)
+           */  }})
+console.log(count)
+          if (count==0)
+
+            {
+
+                alert.classList.remove('hide')
+
+
+
+            }
+
+    }
+
+
+
+
+    ;})
+
+
+ //problem is if I have no events when I filter fetchEvents is called
+//infinite scroll
+function loadMore(){
+
+    //    if($('.alert').hasClass('hide')==false){}
+
+    if(bottomVisible() && lookingForData===false && $('.alert').hasClass('hide')){
+        page++
+        fetchEvents()}
+}
+
+setInterval(loadMore,100)
+
+if (bottomVisible()){clearInterval(loadMore, 100)};
+
+function bottomVisible(){
+    const scrollY = window.scrollY;
+    const visible = document.documentElement.clientHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+    const bottomOfPage = visible + scrollY >= pageHeight
+    return bottomOfPage || pageHeight < visible;
+
+}/**/

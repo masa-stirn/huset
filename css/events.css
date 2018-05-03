@@ -77,23 +77,11 @@ button {
     margin: auto;
     display: flex;
     align-content: center;
-    display: none;
     padding-top: 20vh;
     text-align: center;
 }
 
-.icon {
-    width: 49px;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    font-size: .6em;
-}
 
-.icon img {
-    width: 25px;
-    height: 25px;
-}
 
 /*section*/
 
@@ -139,6 +127,13 @@ section button {
     text-transform: capitalize;
 }
 
+.more {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
 /*sub Section*/
 
 section.sub {
@@ -153,10 +148,6 @@ section.sub {
     margin-top: 0;
 }
 
-.moreInfo {
-    padding-top: 3vh;
-    padding-bottom: 5vh;
-}
 
 
 .subinfo {
@@ -167,15 +158,41 @@ section.sub {
 }
 
 section.sub button {
-    top: 71.2vw;
+    top: 69.2vw;
 }
 
 .back {
-    padding-left:7vw;
-    font-weight:bolder;
+    padding-left: 7vw;
+    font-weight: bolder;
 }
 
-/*navigation*/
+/*header*/
+
+.iconNav {
+    position: absolute;
+    top: 2vh;
+    right: 2.3vh;
+}
+
+.iconNav img {
+    padding-left: 3vh;
+}
+
+/*secondary navigation*/
+
+.icon {
+    width: 49px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: .6em;
+}
+
+.icon img,
+.iconNav img {
+    width: 25px;
+    height: 25px;
+}
 
 nav.secondary {
     position: fixed;
@@ -261,6 +278,19 @@ nav.secondary a {
 
 /*SIDENAV FILTER*/
 
+.backEvt {
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    width: 40vw;
+    text-align: center;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    font-size: 3em;
+    text-decoration-line: underline;
+}
+
+
 .filters {
     display: flex;
     justify-content: space-around;
@@ -328,6 +358,57 @@ div.sideNav div.filterTitle {
     cursor: pointer;
 }
 
+/*date filter*/
+
+input.dateFilter {
+    padding: 3vw;
+    background: none;
+    border-radius: 0%;
+    border-color: #B9B5B5;
+    border-width: thin;
+    border-image: none;
+    border-style: solid;
+    width: 25vw;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
+input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-month-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #000;
+    margin-left: 1.2em;
+    ;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+    content: attr(value);
+}
+
+*/
 /*loader*/
 
 .loader-wrapper {
