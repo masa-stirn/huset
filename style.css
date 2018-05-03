@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: BigJohn;
+    src: url(fonts/big-john.otf);
+}
+
+a {text-decoration:none;
+color:white;
+font-family: BigJohn, sans-serif;
+font-size: 18px;
+cursor: pointeractive;}
+
+div {
+    width: 100%;
+    height: calc(100vh/3);
+    display:flex;
+    justify-content: center;
+align-items: center;
+}
+
+div.eventImg {
+    background: url(images/eS.png) center;
+}
+
+div.volunteerImg {
+    background: url(images/vl.png) no-repeat center;
+    background-size: cover;
+}
+
+div.performerImg {
+    background: url(images/p.png) no-repeat center;
+    background-size: cover;
+}
+
+
+div.eventSeeker {
+    background: #fc4a1a;
+    background: linear-gradient(to right, rgba(247, 183, 51, .5), rgba(252, 74, 26, .5));
+}
+
+div.volunteer {
+    background: linear-gradient(to right, rgba(0, 242, 96, 0.5), rgba(5, 117, 230, 0.5));
+}
+
+div.performer {
+    background: linear-gradient(to bottom, rgba(100, 43, 115, 0.5), rgba(198, 66, 110, 0.5));
+}
