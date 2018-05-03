@@ -1,14 +1,79 @@
 html,
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-.container {
-    height: calc(100% - 60px);
-    max-width: 400px;
-    min-height: 800px;
-    margin: 30px auto 0;
-    box-shadow: 0px 0px 5px black;
+
+/*LOGIN PAGE */
+
+.containerLogin {
+    background-image: url(../images/middle.jpg);
+    background-repeat: no-repeat;
+}
+
+.gradient {
+    position: relative;
+    background: linear-gradient(to right, rgba(0, 242, 96, 0.5), rgba(5, 117, 230, 0.5));
+}
+
+.secondCont {
+    min-height: 736px;
+}
+
+.logoMainPage {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.subtitleVolunteer {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    margin-top: 0;
+    border-bottom: 1px solid white;
+}
+
+.secondCont h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 15px;
+    font-weight: 100;
+    border: 1px solid white;
+    height: 40px;
+    width: 280px;
+}
+
+.icons {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 12px;
+    height: 15px;
+}
+
+.paragraphy {
+    color: white;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+#buttonLoggy {
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+
+/*END OF LOGIN PAGE*/
+
+#wrap-it {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 
 .nav-items {
@@ -24,17 +89,17 @@ body {
 }
 
 .burger-menu {
-    z-index: 1;
+    position: fixed;
+    z-index: 1000;
     cursor: pointer;
     color: white;
-    position: absolute;
     padding: 30px;
     font-size: 20px;
 }
 
 .main-nav {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 1000;
     height: 100%;
     background: linear-gradient( rgb(0, 242, 96, 100), rgb(5, 117, 230, 100));
     box-shadow: 10px #505050;
@@ -47,7 +112,20 @@ body {
 }
 
 .open {
-    width: 20%;
+    width: 60%;
+}
+
+.message {
+    height: 18px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+
+.search {
+    height: 18px;
+    float: right;
+    padding-top: 15px;
 }
 
 .close {
@@ -64,7 +142,7 @@ a {
     float: right;
 }
 
-.icon::after {
+.icon {
     font-family: 'FontAwesome';
     color: white;
     font-size: 24px;
@@ -79,32 +157,59 @@ a {
     content: '\f054';
 }
 
-.fa-search {
-    float: right;
+.logo {
+    height: 50px;
 }
 
 .top-view {
-    height: 50%;
     background: url(https://unsplash.it/1080/720/?random) no-repeat;
     background-size: cover;
     color: white;
 }
 
+.volunteer-name {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
-    font-weight: 100;
-    font-size: 26px;
-    text-align: center;
-    margin: 10px 0;
-    letter-spacing: 1.5px;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 .color-layer {
-    background-color: rgba(107, 23, 102, 0.2);
-    height: 100%;
-    width: 100%;
+    background: linear-gradient( rgb(0, 242, 96, 0.5), rgb(5, 117, 230, 0.5));
     padding: 20px 20px 30px 20px;
     box-sizing: border-box;
     position: relative;
+}
+
+.location {
+    margin: 0;
+}
+
+.timeContainer {
+    grid-row-start: 2;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+.timeContainer img {
+    height: 13px;
+    margin-right: 5px;
+}
+
+.position {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+.position img {
+    height: 15px;
+    margin-right: 5px;
 }
 
 .header {
@@ -113,6 +218,7 @@ h1 {
 }
 
 .thumbnail {
+    margin-top: 3px;
     position: relative;
     width: 70px;
     height: 70px;
@@ -156,16 +262,14 @@ h1 {
     font-weight: 300;
 }
 
-.numNotification {
-    top: 0;
+.entry-container {
+    position: absolute;
+    margin-top: 306px;
+    margin-bottom: 8vh;
 }
 
-span {
-    font-size: 14px;
-    display: block;
-    position: relative;
-    top: 50%;
-    margin-top: -7px;
+.numNotification {
+    top: 0;
 }
 
 .month-selection {
@@ -184,16 +288,12 @@ span.month {
     font-size: 14px;
 }
 
-.bottom-view {
-    height: 50%;
-    overflow: hidden;
-}
-
 .week-container {
     background-color: skyblue;
 }
 
 ul.week {
+    margin: 0;
     display: block;
     padding-left: 50px;
 }
@@ -224,10 +324,7 @@ li.day {
 
 span {
     display: block;
-    text-align: center;
-    width: 100%;
     font-size: 14px;
-    top: 50%;
     margin-top: 8px;
 }
 
@@ -239,13 +336,16 @@ span {
 
 .entry {
     display: grid;
-    justify-content: center;
-    padding: 20px;
-    border-top: 1px solid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(4, 1fr);
+    height: 200px;
+    padding: 15px;
+    border-bottom: 1px solid;
 }
 
-img {
-    display: inline-block;
+.volunteer-role {
+    margin: 0;
+    grid-column-start: 2;
 }
 
 .text {
@@ -258,47 +358,166 @@ img {
 }
 
 .time {
+    margin: 0;
     color: grey;
     font-weight: 300;
     font-size: 14px;
-    display: block;
-    margin-top: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .popup {
-    position: absolute;
-    top: 0;
-    color: #000;
-    z-index: 1;
-    width: 20%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    margin-left: 5vw;
+    top: -500px;
+    height: 0;
+    padding: 25px;
+    color: white;
+    z-index: 2000;
+    width: 290px;
+    background: linear-gradient( rgb(0, 242, 96, 100), rgb(5, 117, 230, 100));
 }
-.hide{
-    display: none;
+
+.popup span {
+    text-transform: uppercase;
+    font-size: 1.2em;
 }
 
 .popuptext {
     color: white;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid white;
 }
 
 .modal-title {
     color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 }
 
-.modal-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.slideMe {
+    animation: slideMe 1s ease forwards;
+}
+
+@keyframes slideMe {
+    100% {
+        top: 30px;
+        height: 70vh;
+    }
+}
+
+.closeModal {
+    float: right;
 }
 
 .buttonModal {
-    width: 100px;
-    border-radius: 100px;
-    padding: 10px;
-    cursor: pointer;
+    grid-column: 2;
+    grid-row: 4;
+    padding: 4vw;
     text-transform: uppercase;
-    color: #fff;
-    background: #2ebaee;
-    font-weight: 500;
+    background: none;
+    border-color: #B9B5B5;
+    border-width: thin;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.active {
+    background: linear-gradient( to right, rgb(0, 242, 96, 100), rgb(5, 117, 230, 100));
+    color: white;
+}
+
+.modal-image {
+    float: right;
+    height: 30px;
+    width: auto;
+    margin-right: 10vw;
+}
+
+
+/*MESSAGES CONTENT*/
+
+#messagesMain{
+    margin-bottom: 8vh;
+
+}
+
+.messagesContainer {
+    display: flex;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+    position: relative;
+    top: 255px;
+    align-items: center;
+}
+
+.messagesName {
+    margin: 0;
+}
+
+.profileMessages {
+    border-radius: 50%;
+    height: 12vh;
+    padding: 10px;
+}
+
+.messagesText1 {
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.messagesText {
+    padding-left: 15px;
+}
+
+.messagesDate {
+    color: grey;
+    margin: 0;
+}
+
+.button-back {
+    position: absolute;
+    position: fixed;
+    bottom: 10%;
+    z-index: 1000;
+    right: 10%;
+    height: 8vh;
+}
+
+
+/*FOOTER*/
+
+.awesomeMenu {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    background: linear-gradient(to right, rgb(0, 242, 96, 100), rgb(5, 117, 230, 100));
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding-top: 10px;
+}
+
+.event p {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.event-icon {
+    height: 20px;
+}
+
+.awesomeIcon {
+    display: flex;
+    justify-content: space-around;
 }
