@@ -8,6 +8,9 @@ function fetchVenues() {
         //make request
         let urlParams = new URLSearchParams(window.location.search)
         let cat = urlParams.get("category");
+        if(!cat){
+            cat="33,56,49";
+        }
         fetch("http://test.masawudesign.dk/wp-json/wp/v2/venues?_embed&categories="+cat)
             //respons back, expect json
             .then(e => e.json())
@@ -97,9 +100,9 @@ function showSingleVenue(aVenue) {
 
     clone2.querySelector(".readmore a").href="form.html?id=" + aVenue.id;
     clone2.querySelector(".evt-btn a").textContent= venText.toUpperCase() + " EVENTS";
-    clone2.querySelector(".evt-btn a").href="performer-events.html?category="+aVenue.categories;
+    clone2.querySelector(".performer-evt-btn").href="performer-events.html?tag="+aVenue.tags;
 
-    console.log(aVenue.categories)
+    console.log(aVenue.tags)
 
 
 

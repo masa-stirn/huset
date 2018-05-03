@@ -9,8 +9,8 @@ function fetchPerformerEvents(){
 //fetch data from json
 // fetch only the categories that match
     let urlParams = new URLSearchParams(window.location.search)
-        let cat = urlParams.get("category");
-        fetch("http://test.masawudesign.dk/wp-json/wp/v2/events?_embed&per_page=2&page="+page+"&categories="+cat)
+        let tag = urlParams.get("tag");
+        fetch("http://test.masawudesign.dk/wp-json/wp/v2/events?_embed&per_page=2&page="+page+"&tag="+tag+"&order=asc")
         .then(e => e.json())
         .then(showAllEvents)
     }
