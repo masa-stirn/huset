@@ -3,15 +3,10 @@ let template = document.querySelector("#template-events").content;
 let popup = document.querySelector(".popup");
 
 
-
-
 popup.addEventListener("click", function(){
     popup.classList.remove("hide");
 
 })
-
-
-
 
 function fetchEvents() {
     fetch(evtPath).then(e => e.json()).then(showEvents)

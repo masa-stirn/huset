@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huset-performers-concerts</title>
+    <link rel="stylesheet" href="css/performers.css">
+
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+    <!-- burger menu here -->
+    <section>
+        <div class="burger-menu">&#9776;</div>
+        <nav class="main-nav close">
+            <div class="nav-items"> <a href="#" class="closebtn">&times;</a>
+            <a href="login.html">
+                <img src="/images/huset-logo.png" alt="huset logo" class="logo">
+
+            </a>
+            <a href="performers.html">Venues</a> <a href="#">FAQ</a> <a href="#">Contact</a> </div>
+        </nav>
+    </section>
+    <!-- header section -->
+    <section id="header-venue">
+        <div class="gradient">
+          <img class="header-icons search-icon" src="images/search.svg" alt="search icon">
+           <img class="header-icons chat-icon" src="images/message.svg" alt="chat icon">
+           <div class="header-box">
+                <h2 class="header-text"></h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- buttons -->
+    <section id="btn-venues" class="section">
+
+    </section>
+    <template id="btn-template">
+    <div class="venue-box">
+      <button class="readmore nav-btn">
+          <a class="venue-text">
+
+          </a>
+      </button>
+    </div>
+    </template>
+
+    <!-- template -->
+    <section id="concert-venues">
+        <template id="concert-template">
+      <article class="concert-modal">
+          <h1>TITLE</h1>
+          <img class="conc-img" src="" alt="Huset venue image">
+          <h3><span class="icon"></span><span class="bold">Price: </span><span class="price"></span></h3>
+          <h3><span class="bold">Floor: </span><span class="floor"></span></h3>
+          <h3><span class="bold">Usage: </span><span class="usage"></span></h3>
+          <h3><span class="bold">Technical info: </span><span class="facilitates"></span></h3>
+          <h3><span class="bold">Catering: </span><span class="catering"></span></h3>
+          <h3><span class="bold">Cleaning: </span><span class="cleaning"></span></h3>
+          <h3><span class="bold">Capacity: </span><span class="capacity"></span></h3>
+          <h3><span class="bold">Venue type: </span><span class="venue"></span></h3>
+          <p><span class="bold">Description:</span><span class="desciption"></span></p>
+          <div class="btns">
+        <button class="readmore"><a class="venue-text" href="">INQUIRE</a></button>
+        <button class="readmore evt-btn"><a class="venue-text performer-evt-btn" href=""></a></button>
+        </div>
+      </article>
+       </template>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="awesomeMenu">
+            <div class="awesomeIcon">
+            <div class="event">
+
+            <img class="event-icon" src="images/event.png" alt="event-icon">
+            <p>Eventseeker</p>
+                </div>
+            <div class="event"><img class="event-icon" src="images/volunteer.png" alt="volunteer-icon">
+                <p>Volunteer</p>
+                </div>
+            <div class="event"><img class="event-icon" src="images/performer.png" alt="performer-icon"><p>Performer</p></div>
+            </div>
+
+        </footer>
+
+</body>
+<script src="js/performers.js"></script>
+<script src="js/burger-menu.js"></script>
+
+</html>

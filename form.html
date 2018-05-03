@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/performers.css">
+
+    <!-- favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!-- burger menu here -->
+    <section>
+        <div class="burger-menu">&#9776;</div>
+        <nav class="main-nav close">
+            <div class="nav-items"> <a href="#" class="closebtn">&times;</a>
+            <a href="login.html">
+                <img src="/images/huset-logo.png" alt="huset logo" class="logo">
+            </a>
+            <a href="performers.html">Venues</a> <a href="#">FAQ</a> <a href="#">Contact</a> </div>
+        </nav>
+    </section>
+    <!-- header section -->
+    <section id="header-venue">
+        <div class="gradient">
+            <img class="header-icons search-icon" src="images/search.svg" alt="search icon">
+            <img class="header-icons chat-icon" src="images/message.svg" alt="chat icon">
+            <div class="header-box">
+                <h2><span class="head-txt">You are booking:</span><span class="header-text2"></span></h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="form">
+
+<!--<form action="/action_page.php">-->
+ <form action="#">
+  First name<br>
+  <input type="text" name="firstname">
+  <br>
+  Band / Artist name<br>
+  <input type="text" name="lastname">
+  <br>
+  Link to band/ artist webpage<br>
+  <input type="text" name="linktoband">
+  <br>
+  Contact email<br>
+  <input type="text" name="contactemail">
+  <br>
+  Choose a date<br>
+  <input type="date" name="date" placeholder="&#128197;">
+  <br><br>
+<!--  <input class="readmore" type="submit" value="Submit" href="booked.html">-->
+    <button class="readmore evt-btn"><a id ="btn" class="venue-text" href="">SUBMIT</a></button>
+    </form>
+    </div>
+
+    <footer class="awesomeMenu">
+            <div class="awesomeIcon">
+            <div class="event">
+
+            <img class="event-icon" src="images/event.png" alt="event-icon">
+            <p>Eventseeker</p>
+                </div>
+            <div class="event"><img class="event-icon" src="images/volunteer.png" alt="volunteer-icon">
+                <p>Volunteer</p>
+                </div>
+            <div class="event"><img class="event-icon" src="images/performer.png" alt="performer-icon"><p>Performer</p></div>
+            </div>
+
+        </footer>
+
+
+    <script src="js/form.js"></script>
+    <script src="js/burger-menu.js"></script>
+</body>
+
+</html>

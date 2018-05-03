@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huset performers</title>
+    <title>Huset performer events</title>
     <link rel="stylesheet" href="css/performers.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
 
@@ -18,8 +18,8 @@
 
 </head>
 
-<body id="performer">
-    <div class="gradient">
+<body>
+
 <!-- burger menu here -->
     <section>
             <div class="burger-menu">&#9776;</div>
@@ -33,19 +33,48 @@
             </nav>
     </section>
 
-  <!-- intro text -->
-  <div class="heading">
-  <h1 class="title">HI ARTISTS AND PERFORMERS</h1>
-  <h2>Where do you want to perform?</h2>
-</div>
-  <!-- buttons -->
-<div class="menu">
-<!--
- <button><a href="concerts.html">Concerts</a></button>
- <button><a href="#">Theatre</a></button>
- <button><a href="#">Cinema</a></button>
--->
-</div>
+ <!-- header section -->
+    <section id="header-venue">
+        <div class="gradient">
+          <img class="header-icons search-icon" src="images/search.svg" alt="search icon">
+           <img class="header-icons chat-icon" src="images/message.svg" alt="chat icon">
+           <div class="header-box">
+                <h2 class="header-text"></h2>
+            </div>
+        </div>
+    </section>
+
+  <!-- template -->
+<section id="performer-evt-section"></section>
+
+<template id="performer-evt-template">
+   <article>
+        <h1 class="event-name">EVT NAME</h1>
+        <h3>
+            <span class="day">DD</span>
+            <span> / </span>
+            <span class="month">MM</span>
+            <span> / </span>
+            <span class="year">YY</span>
+             <span> at </span>
+             <span class="time">TIME</span>
+             <span>.00</span>
+        </h3>
+        <div class="thumb">
+        <img src="" alt="Image of the event at Huset" class="event-img">
+        </div>
+        <h4 class="genre">GENRE</h4>
+        <h4>
+            <span class="venue">VENUE</span>,
+            <span class="fee">DKK</span>
+        </h4>
+        <button class="buy-btn readmore">BUY TICKET</button>
+        <div class="more-info">
+        <a class="underline">more info</a></div>
+    </article>
+</template>
+
+
   <!-- footer -->
         <footer class="awesomeMenu">
             <div class="awesomeIcon">
@@ -62,8 +91,8 @@
 
         </footer>
 
-</div>
+
 </body>
-<script src="js/venues.js"></script>
+<script src="js/performer-events.js"></script>
 <script src="js/burger-menu.js"></script>
 </html>
