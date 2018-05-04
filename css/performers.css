@@ -365,3 +365,7 @@ div.thumb {
     right: 1px;
     bottom: 50px;
 }
+
+input {
+    border: 1px solid gray;
+}
